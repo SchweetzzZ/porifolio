@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>SYS.DEV | Senior Backend Portfolio</title>
+    <meta name="description" content="Portfólio de Engenharia de Software e Arquitetura Backend. Especialista em sistemas escaláveis, microsserviços e alta disponibilidade."/>
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="SYS.DEV | Senior Backend Portfolio"/>
+    <meta property="og:description" content="Portfólio de Engenharia de Software e Arquitetura Backend. Especialista em sistemas escaláveis, microsserviços e alta disponibilidade."/>
+    <meta property="og:image" content="screen.png"/>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23adc6ff'><path d='M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z'/></svg>"/>
+
+    <!-- Scripts and Fonts -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Geist:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+    
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#009ada",
+                    "on-primary-fixed-variant": "#004395",
+                    "surface-variant": "#32353c",
+                    "surface-container-high": "#272a31",
+                    "surface-tint": "#adc6ff",
+                    "on-secondary-fixed": "#0b1c30",
+                    "surface-container-low": "#191b23",
+                    "on-error": "#690005",
+                    "primary-container": "#4d8eff",
+                    "inverse-surface": "#e1e2ec",
+                    "surface-bright": "#363941",
+                    "on-error-container": "#ffdad6",
+                    "secondary-container": "#3a4a5f",
+                    "tertiary": "#89ceff",
+                    "on-secondary-fixed-variant": "#38485d",
+                    "on-surface-variant": "#c2c6d6",
+                    "on-background": "#e1e2ec",
+                    "error": "#ffb4ab",
+                    "tertiary-fixed": "#c9e6ff",
+                    "on-primary": "#002e6a",
+                    "surface": "#10131a",
+                    "primary": "#adc6ff",
+                    "surface-dim": "#10131a",
+                    "primary-fixed-dim": "#adc6ff",
+                    "on-surface": "#e1e2ec",
+                    "error-container": "#93000a",
+                    "inverse-on-surface": "#2e3038",
+                    "on-secondary": "#213145",
+                    "secondary": "#b7c8e1",
+                    "secondary-fixed-dim": "#b7c8e1",
+                    "on-primary-container": "#00285d",
+                    "tertiary-fixed-dim": "#89ceff",
+                    "inverse-primary": "#005ac2",
+                    "surface-container-lowest": "#0b0e15",
+                    "outline-variant": "#424754",
+                    "background": "#10131a",
+                    "on-secondary-container": "#a9bad3",
+                    "on-tertiary-container": "#002d43",
+                    "surface-container": "#1d2027",
+                    "on-tertiary-fixed-variant": "#004c6e",
+                    "on-primary-fixed": "#001a42",
+                    "secondary-fixed": "#d3e4fe",
+                    "surface-container-highest": "#32353c",
+                    "on-tertiary-fixed": "#001e2f",
+                    "outline": "#8c909f",
+                    "on-tertiary": "#00344d",
+                    "primary-fixed": "#d8e2ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "section-padding-mobile": "64px",
+                    "container-max": "1120px",
+                    "unit": "8px",
+                    "section-padding-desktop": "120px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "code-block": ["JetBrains Mono"],
+                    "body-lg": ["Geist"],
+                    "headline-md": ["Geist"],
+                    "display-lg-mobile": ["Geist"],
+                    "label-sm": ["JetBrains Mono"],
+                    "display-lg": ["Geist"],
+                    "body-md": ["Geist"]
+            },
+            "fontSize": {
+                    "code-block": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["13px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .lift-glow {
+            transition: all 150ms ease-in-out;
+        }
+        .lift-glow:hover {
+            transform: translateY(-4px);
+            border-color: #adc6ff;
+            box-shadow: 0 0 20px rgba(173, 198, 255, 0.05);
+        }
+        .active-tab {
+            color: #adc6ff;
+            border-bottom: 2px solid #adc6ff;
+        }
+        .timeline-line {
+            background-image: linear-gradient(to bottom, #334155 50%, transparent 50%);
+            background-size: 1px 8px;
+        }
+        body {
+            background-color: #10131a;
+            color: #e1e2ec;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+    <!-- TopNavBar -->
+    <header class="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-md border-b border-outline-variant">
+        <nav class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+            <div class="font-headline-md text-headline-md font-bold tracking-tighter text-on-background">
+                SYS.DEV
+            </div>
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-150" href="#projects">Projetos</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-150" href="#experience">Experiência</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-150" href="#contact">Contato</a>
+                <a href="#contact" class="bg-primary text-on-primary px-6 py-2 rounded font-bold transition-all duration-150 ease-in-out hover:opacity-90">Currículo</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-on-background p-2 focus:outline-none" aria-label="Abrir Menu">
+                <span class="material-symbols-outlined text-2xl" id="menu-icon">menu</span>
+            </button>
+        </nav>
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-surface-container border-b border-outline-variant px-6 py-4 flex flex-col gap-4">
+            <a class="text-on-surface-variant hover:text-primary py-2 transition-colors" href="#projects">Projetos</a>
+            <a class="text-on-surface-variant hover:text-primary py-2 transition-colors" href="#experience">Experiência</a>
+            <a class="text-on-surface-variant hover:text-primary py-2 transition-colors" href="#contact">Contato</a>
+            <a href="#contact" class="bg-primary text-on-primary text-center py-2.5 rounded font-bold hover:opacity-90 transition-all">Currículo</a>
+        </div>
+    </header>
+
+    <!-- Expanded Hero Section -->
+    <section class="relative min-h-screen flex flex-col justify-center pt-24 pb-20">
+        <div class="relative z-10 max-w-container-max mx-auto px-gutter w-full">
+            <!-- Main Headline and Intro -->
+            <div class="max-w-3xl mb-16">
+                <p class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-4">Senior Backend Developer</p>
+                <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight">
+                    Arquitetando Sistemas <br/>
+                    <span class="text-primary-container">Escaláveis e Robustos.</span>
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                    Especialista em microsserviços e sistemas de alta disponibilidade. Focado em transformar desafios técnicos complexos em infraestruturas performáticas.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a class="bg-primary text-on-primary px-8 py-3 rounded font-bold hover:opacity-90 transition-all" href="#projects">Projetos</a>
+                    <a class="border border-outline text-on-surface px-8 py-3 rounded font-bold hover:bg-surface-container transition-all flex items-center gap-2" href="https://github.com" target="_blank" rel="noopener noreferrer">
+                        <span class="material-symbols-outlined text-[20px]">code</span> GitHub
+                    </a>
+                    <a class="border border-outline text-on-surface px-8 py-3 rounded font-bold hover:bg-surface-container transition-all flex items-center gap-2" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                        <span class="material-symbols-outlined text-[20px]">link</span> LinkedIn
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Integrated About & Experience Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-20 border-t border-outline-variant pt-16" id="experience">
+                <!-- Left Column: About Me -->
+                <div class="md:col-span-5">
+                    <h2 class="font-headline-md text-headline-md mb-6 flex items-center gap-3">
+                        <span class="w-8 h-[2px] bg-primary"></span> Sobre mim
+                    </h2>
+                    <div class="space-y-6 text-on-surface-variant font-body-md text-body-md">
+                        <p>Com mais de 8 anos de experiência em desenvolvimento de sistemas, meu foco é a construção de soluções backend que não apenas funcionam, mas performam sob pressão.</p>
+                        <p>Acredito em código limpo, arquitetura desacoplada e processos de CI/CD automatizados. Atualmente, lidero iniciativas técnicas focadas em nuvem e segurança de dados.</p>
+                        <p>Quando não estou codando, estou estudando novos padrões de concorrência ou contribuindo para projetos open-source no ecossistema Node.</p>
+                    </div>
+                </div>
+                <!-- Right Column: Experience Timeline -->
+                <div class="md:col-span-7">
+                    <h2 class="font-headline-md text-headline-md mb-6 flex items-center gap-3">
+                        <span class="w-8 h-[2px] bg-primary"></span> Experiência Profissional
+                    </h2>
+                    <div class="space-y-0 relative">
+                        <div class="absolute left-1 top-2 bottom-2 w-[1px] timeline-line"></div>
+                        <div class="relative pl-10 pb-10">
+                            <div class="absolute left-0 top-2 w-2 h-2 bg-primary rounded-full"></div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-1">
+                                <h4 class="font-headline-md text-[18px] font-bold">Senior Software Engineer</h4>
+                                <span class="font-label-sm text-[12px] text-secondary bg-secondary-container/20 px-2 py-0.5 rounded">2021 — Presente</span>
+                            </div>
+                            <p class="text-on-surface text-sm font-semibold mb-1">Tech Solutions Inc.</p>
+                            <p class="text-on-surface-variant text-sm leading-relaxed">Liderança técnica na migração de monolito para microsserviços, impactando mais de 1M de usuários ativos.</p>
+                        </div>
+                        <div class="relative pl-10 pb-10">
+                            <div class="absolute left-0 top-2 w-2 h-2 bg-outline rounded-full"></div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-1">
+                                <h4 class="font-headline-md text-[18px] font-bold">Backend Developer</h4>
+                                <span class="font-label-sm text-[12px] text-on-surface-variant px-2 py-0.5 rounded">2018 — 2021</span>
+                            </div>
+                            <p class="text-on-surface text-sm font-semibold mb-1">Global Digital Agency</p>
+                            <p class="text-on-surface-variant text-sm leading-relaxed">Desenvolvimento de APIs robustas para o setor de e-commerce utilizando Java Spring Boot e PostgreSQL.</p>
+                        </div>
+                        <div class="relative pl-10">
+                            <div class="absolute left-0 top-2 w-2 h-2 bg-outline rounded-full"></div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-1">
+                                <h4 class="font-headline-md text-[18px] font-bold">Software Intern</h4>
+                                <span class="font-label-sm text-[12px] text-on-surface-variant px-2 py-0.5 rounded">2016 — 2018</span>
+                            </div>
+                            <p class="text-on-surface text-sm font-semibold mb-1">Innovate Dev Studio</p>
+                            <p class="text-on-surface-variant text-sm leading-relaxed">Início da jornada técnica focada em manutenção de sistemas legados e refatoração de código.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-[120px] bg-surface-container-lowest" id="projects">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div>
+                    <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-4">Projetos Selecionados</h2>
+                    <p class="text-on-surface-variant max-w-lg">Uma amostra do meu trabalho em engenharia de software e design de arquitetura.</p>
+                </div>
+                <!-- Tabbed Navigation -->
+                <div class="flex gap-8 border-b border-outline-variant w-full md:w-auto">
+                    <button class="font-label-sm text-label-sm pb-4 active-tab uppercase tracking-widest transition-all" id="tab-ts" onclick="switchTab('ts')">TypeScript / Node.js</button>
+                    <button class="font-label-sm text-label-sm pb-4 text-on-surface-variant uppercase tracking-widest hover:text-primary transition-all" id="tab-java" onclick="switchTab('java')">Java / Spring Boot</button>
+                </div>
+            </div>
+            <!-- Project Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="project-container">
+                <!-- TS Project 1 -->
+                <div class="project-item ts-project group flex flex-col bg-surface-container rounded-xl border border-outline-variant lift-glow overflow-hidden">
+                    <div class="h-64 overflow-hidden relative">
+                        <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC_QT085T7iouGsCMpuHS3WiVk0CDiEL8B1FunfaOCLRHG0SjAsNj1reh0FmdsW1DqPWJDOUP68dV6G8KQSiv5wkWyi3my8rvduaFpYjt4m7meT2otipJx8FEJn-OPnkW7bBINq9SxYcrvVamOMtIGYyUFaBWiR6kKnbrlcFdhSWt9KUjwQxPU9lyNXn6wRdejYs2H9kPWbX_4WiIdclfpVq38EowVwPTxSGLPYmZtSrQx8hVTTAfrb4Cye6MhQq0NtzygZUUVZTdU')"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-headline-md text-headline-md">Nexus API Gateway</h3>
+                            <span class="font-label-sm text-label-sm px-3 py-1 bg-primary-container text-on-primary-container rounded-full">Node.js</span>
+                        </div>
+                        <p class="text-on-surface-variant mb-6">Gateway de API de alto desempenho com rate-limiting dinâmico e autenticação JWT centralizada.</p>
+                        <div class="mb-6">
+                            <h4 class="font-label-sm text-label-sm text-secondary mb-2 uppercase">Desafio Técnico:</h4>
+                            <p class="text-on-surface-variant text-sm italic">Redução de latência em 40% através de caching agressivo com Redis e otimização de payloads JSON.</p>
+                        </div>
+                        <div class="mt-auto flex gap-4 pt-6 border-t border-outline-variant">
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-primary font-bold hover:underline">
+                                <span class="material-symbols-outlined">terminal</span> Repositório
+                            </a>
+                            <a href="#" class="flex items-center gap-2 text-on-surface-variant font-bold hover:text-on-surface transition-colors">
+                                <span class="material-symbols-outlined">visibility</span> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- TS Project 2 -->
+                <div class="project-item ts-project group flex flex-col bg-surface-container rounded-xl border border-outline-variant lift-glow overflow-hidden">
+                    <div class="h-64 overflow-hidden relative">
+                        <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdaT_CN7bfyOXC7a64jRkeeX6-GhL7CBov9gdXPqzuhUA5EYr1xX0HDrfT0Xeowi6HOuWPwh6vW2QrkQjpZusq1cGqzz3vuKuWOUOrMqaLKMQgJZYxBtKWvIn4ZTI_AoYa_WL5lqrfScaQW0LXO56ogahnDCkvrkOZsfDMqrJ_I-hn7GXpZ5jvmaci5yKhPoENUSAW3ZoA7rK2V7pKMl3A3BrUfBnRflA0Ac9z-6RJ3q211Q4ZYbYsStyNKs62jLqi8aSrB7K8rYU')"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-headline-md text-headline-md">StreamSync Engine</h3>
+                            <span class="font-label-sm text-label-sm px-3 py-1 bg-primary-container text-on-primary-container rounded-full">TypeScript</span>
+                        </div>
+                        <p class="text-on-surface-variant mb-6">Processamento de eventos em tempo real utilizando Kafka e WebSockets para sincronização de estados globais.</p>
+                        <div class="mb-6">
+                            <h4 class="font-label-sm text-label-sm text-secondary mb-2 uppercase">Desafio Técnico:</h4>
+                            <p class="text-on-surface-variant text-sm italic">Garantia de entrega 'exactly-once' em cenários de alta concorrência e falhas parciais de rede.</p>
+                        </div>
+                        <div class="mt-auto flex gap-4 pt-6 border-t border-outline-variant">
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-primary font-bold hover:underline">
+                                <span class="material-symbols-outlined">terminal</span> Repositório
+                            </a>
+                            <a href="#" class="flex items-center gap-2 text-on-surface-variant font-bold hover:text-on-surface transition-colors">
+                                <span class="material-symbols-outlined">visibility</span> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Java Projects (Hidden initially) -->
+                <div class="project-item java-project hidden group flex flex-col bg-surface-container rounded-xl border border-outline-variant lift-glow overflow-hidden">
+                    <div class="h-64 overflow-hidden relative">
+                        <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBo0HQOHjKajmF3u-YSNgxjyPgYYFS2B3CN-MDFczjshJyDnNI8ifrIia3zwBKWxk6UZuj-PB7q-Xw0rb_M1IVCxgAL36DujxuvsXvThMH27gVPfzF2ZOlPrkGyZ12ebCJpGiwwjzcP-6nbARKmyoDhJCG2KuKgAeKyBlMG-pW-wJSrepbM7e04f5Xu6Vx6jKaP7Dp1LHoeGsSNpxzb76fMI5w3YZnj0VzK2wZIznF5MFOpJfcth2HiJ4nhBVThakS6DHfkQ42QXXY')"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-headline-md text-headline-md">Core Finance Ledger</h3>
+                            <span class="font-label-sm text-label-sm px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full">Spring Boot</span>
+                        </div>
+                        <p class="text-on-surface-variant mb-6">Motor transacional para processamento financeiro com suporte a multi-moeda e reconciliação automática.</p>
+                        <div class="mb-6">
+                            <h4 class="font-label-sm text-label-sm text-secondary mb-2 uppercase">Desafio Técnico:</h4>
+                            <p class="text-on-surface-variant text-sm italic">Implementação de isolamento ACID rigoroso em banco de dados distribuído para 10k transações por segundo.</p>
+                        </div>
+                        <div class="mt-auto flex gap-4 pt-6 border-t border-outline-variant">
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-primary font-bold hover:underline">
+                                <span class="material-symbols-outlined">terminal</span> Repositório
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="py-24 bg-background">
+        <div class="max-w-container-max mx-auto px-gutter text-center">
+            <h2 class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em] mb-12">Stack Tecnológica</h2>
+            <div class="flex flex-wrap justify-center gap-10 opacity-75 hover:opacity-100 transition-opacity duration-300">
+                <div class="flex flex-col items-center gap-3">
+                    <div class="w-12 h-12 flex items-center justify-center bg-surface-container border border-outline-variant rounded hover:border-primary transition-colors group">
+                        <span class="material-symbols-outlined text-secondary group-hover:text-primary">developer_board</span>
+                    </div>
+                    <span class="font-label-sm text-label-sm">Node.js</span>
+                </div>
+                <div class="flex flex-col items-center gap-3">
+                    <div class="w-12 h-12 flex items-center justify-center bg-surface-container border border-outline-variant rounded hover:border-primary transition-colors group">
+                        <span class="material-symbols-outlined text-secondary group-hover:text-primary">terminal</span>
+                    </div>
+                    <span class="font-label-sm text-label-sm">TypeScript</span>
+                </div>
+                <div class="flex flex-col items-center gap-3">
+                    <div class="w-12 h-12 flex items-center justify-center bg-surface-container border border-outline-variant rounded hover:border-primary transition-colors group">
+                        <span class="material-symbols-outlined text-secondary group-hover:text-primary">coffee</span>
+                    </div>
+                    <span class="font-label-sm text-label-sm">Spring Boot</span>
+                </div>
+                <div class="flex flex-col items-center gap-3">
+                    <div class="w-12 h-12 flex items-center justify-center bg-surface-container border border-outline-variant rounded hover:border-primary transition-colors group">
+                        <span class="material-symbols-outlined text-secondary group-hover:text-primary">database</span>
+                    </div>
+                    <span class="font-label-sm text-label-sm">PostgreSQL</span>
+                </div>
+                <div class="flex flex-col items-center gap-3">
+                    <div class="w-12 h-12 flex items-center justify-center bg-surface-container border border-outline-variant rounded hover:border-primary transition-colors group">
+                        <span class="material-symbols-outlined text-secondary group-hover:text-primary">cloud</span>
+                    </div>
+                    <span class="font-label-sm text-label-sm">Docker/K8s</span>
+                </div>
+                <div class="flex flex-col items-center gap-3">
+                    <div class="w-12 h-12 flex items-center justify-center bg-surface-container border border-outline-variant rounded hover:border-primary transition-colors group">
+                        <span class="material-symbols-outlined text-secondary group-hover:text-primary">hub</span>
+                    </div>
+                    <span class="font-label-sm text-label-sm">AWS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-[120px] bg-background" id="contact">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <div>
+                    <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6">Vamos Conversar?</h2>
+                    <p class="text-on-surface-variant font-body-lg text-body-lg mb-10">Estou sempre aberto a discutir novos projetos, arquiteturas complexas ou oportunidades de mentoria.</p>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 flex items-center justify-center bg-surface-container rounded">
+                                <span class="material-symbols-outlined text-primary">mail</span>
+                            </div>
+                            <div>
+                                <p class="font-label-sm text-label-sm text-on-surface-variant uppercase">E-mail</p>
+                                <p class="font-body-md text-body-md">contato@sysdev.io</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 flex items-center justify-center bg-surface-container rounded">
+                                <span class="material-symbols-outlined text-primary">location_on</span>
+                            </div>
+                            <div>
+                                <p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Localização</p>
+                                <p class="font-body-md text-body-md">São Paulo, Brasil</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form id="contact-form" class="bg-surface-container p-8 md:p-12 rounded-xl border border-outline-variant">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="flex flex-col gap-2">
+                            <label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Nome</label>
+                            <input required class="bg-surface-container-low border-outline-variant rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none" placeholder="Seu nome" type="text"/>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="font-label-sm text-label-sm uppercase text-on-surface-variant">E-mail</label>
+                            <input required class="bg-surface-container-low border-outline-variant rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none" placeholder="seu@email.com" type="email"/>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2 mb-8">
+                        <label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Mensagem</label>
+                        <textarea required class="bg-surface-container-low border-outline-variant rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none" placeholder="Como posso ajudar?" rows="4"></textarea>
+                    </div>
+                    <button class="w-full bg-primary text-on-primary py-4 rounded font-bold hover:opacity-90 transition-all flex items-center justify-center gap-2" type="submit">
+                        Enviar Mensagem <span class="material-symbols-outlined">send</span>
+                    </button>
+                    <div id="form-status" class="hidden mt-4 p-3 rounded text-center text-sm font-semibold"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-outline-variant">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4 px-gutter max-w-container-max mx-auto py-12">
+            <div class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">
+                SYS.DEV
+            </div>
+            <p class="font-label-sm text-label-sm text-on-surface-variant">
+                © 2024 Architectural Backend Portfolio
+            </p>
+            <div class="flex gap-6">
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-150" href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-150" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-150" href="#contact">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab Switcher
+        function switchTab(stack) {
+            const tsTab = document.getElementById('tab-ts');
+            const javaTab = document.getElementById('tab-java');
+            const projects = document.querySelectorAll('.project-item');
+
+            if (stack === 'ts') {
+                tsTab.classList.add('active-tab');
+                tsTab.classList.remove('text-on-surface-variant');
+                javaTab.classList.remove('active-tab');
+                javaTab.classList.add('text-on-surface-variant');
+                
+                projects.forEach(p => {
+                    if (p.classList.contains('ts-project')) {
+                        p.classList.remove('hidden');
+                    } else {
+                        p.classList.add('hidden');
+                    }
+                });
+            } else {
+                javaTab.classList.add('active-tab');
+                javaTab.classList.remove('text-on-surface-variant');
+                tsTab.classList.remove('active-tab');
+                tsTab.classList.add('text-on-surface-variant');
+
+                projects.forEach(p => {
+                    if (p.classList.contains('java-project')) {
+                        p.classList.remove('hidden');
+                    } else {
+                        p.classList.add('hidden');
+                    }
+                });
+            }
+        }
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                menuIcon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+            });
+
+            // Close menu on link click
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.textContent = 'menu';
+                });
+            });
+        }
+
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Contact Form Feedback
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+
+        if (contactForm && formStatus) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                formStatus.classList.remove('hidden', 'bg-red-500/20', 'text-red-300');
+                formStatus.classList.add('bg-green-500/20', 'text-green-300');
+                formStatus.textContent = 'Mensagem enviada com sucesso! Obrigado pelo contato.';
+                contactForm.reset();
+                setTimeout(() => {
+                    formStatus.classList.add('hidden');
+                }, 5000);
+            });
+        }
+    </script>
+</body>
+</html>
