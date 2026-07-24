@@ -414,14 +414,23 @@
                     <p class="text-on-surface-variant max-w-lg">Aplicações construídas para resolver problemas complexos
                         com alta performance e boas práticas.</p>
                 </div>
-                <!-- Navigation Tabs -->
-                <div class="flex gap-4 border-b border-outline-variant w-full md:w-auto">
-                    <button
-                        class="font-code-block text-xs pb-3 active-tab uppercase tracking-wider transition-all font-semibold"
-                        id="tab-ts" onclick="switchTab('ts')">TypeScript Ecosystem</button>
-                    <button
-                        class="font-code-block text-xs pb-3 text-on-surface-variant uppercase tracking-wider hover:text-primary transition-all font-semibold"
-                        id="tab-java" onclick="switchTab('java')">Java / Spring Boot</button>
+                <!-- Navigation Tabs (Segmented Button Switcher) -->
+                <div class="flex flex-col items-start md:items-end gap-2 w-full md:w-auto">
+                    <span class="text-[11px] font-code-block text-primary flex items-center gap-1.5 bg-primary/10 px-3 py-1 rounded-full border border-primary/20 animate-pulse">
+                        <span class="material-symbols-outlined text-sm">touch_app</span> Clique para alternar a stack de projetos
+                    </span>
+                    <div class="bg-surface-container border border-outline-variant p-1.5 rounded-xl flex gap-2 w-full md:w-auto">
+                        <button id="tab-ts" onclick="switchTab('ts')"
+                            class="flex-1 md:flex-initial flex items-center justify-center gap-2 font-code-block text-xs px-4 py-2.5 rounded-lg font-bold transition-all duration-200 bg-primary text-on-primary shadow-md">
+                            <span class="material-symbols-outlined text-base">code</span>
+                            <span>TypeScript Ecosystem</span>
+                        </button>
+                        <button id="tab-java" onclick="switchTab('java')"
+                            class="flex-1 md:flex-initial flex items-center justify-center gap-2 font-code-block text-xs px-4 py-2.5 rounded-lg font-bold transition-all duration-200 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high">
+                            <span class="material-symbols-outlined text-base">coffee</span>
+                            <span>Java / Spring Boot</span>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -751,10 +760,8 @@
             const projects = document.querySelectorAll('.project-item');
 
             if (stack === 'ts') {
-                tsTab.classList.add('active-tab');
-                tsTab.classList.remove('text-on-surface-variant');
-                javaTab.classList.remove('active-tab');
-                javaTab.classList.add('text-on-surface-variant');
+                tsTab.className = 'flex-1 md:flex-initial flex items-center justify-center gap-2 font-code-block text-xs px-4 py-2.5 rounded-lg font-bold transition-all duration-200 bg-primary text-on-primary shadow-md';
+                javaTab.className = 'flex-1 md:flex-initial flex items-center justify-center gap-2 font-code-block text-xs px-4 py-2.5 rounded-lg font-bold transition-all duration-200 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high';
 
                 projects.forEach(p => {
                     if (p.classList.contains('ts-project')) {
@@ -764,10 +771,8 @@
                     }
                 });
             } else {
-                javaTab.classList.add('active-tab');
-                javaTab.classList.remove('text-on-surface-variant');
-                tsTab.classList.remove('active-tab');
-                tsTab.classList.add('text-on-surface-variant');
+                javaTab.className = 'flex-1 md:flex-initial flex items-center justify-center gap-2 font-code-block text-xs px-4 py-2.5 rounded-lg font-bold transition-all duration-200 bg-tertiary text-on-tertiary-container shadow-md';
+                tsTab.className = 'flex-1 md:flex-initial flex items-center justify-center gap-2 font-code-block text-xs px-4 py-2.5 rounded-lg font-bold transition-all duration-200 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high';
 
                 projects.forEach(p => {
                     if (p.classList.contains('java-project')) {
