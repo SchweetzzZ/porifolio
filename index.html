@@ -1,130 +1,145 @@
 <!DOCTYPE html>
 <html class="dark" lang="pt-BR">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Jônatas Caçula Soares | Desenvolvedor Backend</title>
-    <meta name="description" content="Portfólio Profissional de Jônatas Caçula Soares. Desenvolvedor Backend especialista em TypeScript, NestJS, Elysia.js, PostgreSQL e Java (Spring Boot)."/>
-    
+    <meta name="description"
+        content="Portfólio Profissional de Jônatas Caçula Soares. Desenvolvedor Backend especialista em TypeScript, NestJS, Elysia.js, PostgreSQL e Java (Spring Boot)." />
+
     <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Jônatas Caçula Soares | Desenvolvedor Backend"/>
-    <meta property="og:description" content="Desenvolvedor Backend com experiência em APIs REST escaláveis, TypeScript (NestJS, Elysia.js), Java (Spring Boot), Docker e Cloud."/>
-    <meta property="og:image" content="screen.png"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Jônatas Caçula Soares | Desenvolvedor Backend" />
+    <meta property="og:description"
+        content="Desenvolvedor Backend com experiência em APIs REST escaláveis, TypeScript (NestJS, Elysia.js), Java (Spring Boot), Docker e Cloud." />
+    <meta property="og:image" content="screen.png" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23adc6ff'><path d='M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z'/></svg>"/>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23adc6ff'><path d='M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z'/></svg>" />
 
     <!-- Scripts e Fontes -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Geist:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+
     <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "tertiary-container": "#009ada",
-                    "on-primary-fixed-variant": "#004395",
-                    "surface-variant": "#32353c",
-                    "surface-container-high": "#272a31",
-                    "surface-tint": "#adc6ff",
-                    "on-secondary-fixed": "#0b1c30",
-                    "surface-container-low": "#191b23",
-                    "on-error": "#690005",
-                    "primary-container": "#4d8eff",
-                    "inverse-surface": "#e1e2ec",
-                    "surface-bright": "#363941",
-                    "on-error-container": "#ffdad6",
-                    "secondary-container": "#3a4a5f",
-                    "tertiary": "#89ceff",
-                    "on-secondary-fixed-variant": "#38485d",
-                    "on-surface-variant": "#c2c6d6",
-                    "on-background": "#e1e2ec",
-                    "error": "#ffb4ab",
-                    "tertiary-fixed": "#c9e6ff",
-                    "on-primary": "#002e6a",
-                    "surface": "#10131a",
-                    "primary": "#adc6ff",
-                    "surface-dim": "#10131a",
-                    "primary-fixed-dim": "#adc6ff",
-                    "on-surface": "#e1e2ec",
-                    "error-container": "#93000a",
-                    "inverse-on-surface": "#2e3038",
-                    "on-secondary": "#213145",
-                    "secondary": "#b7c8e1",
-                    "secondary-fixed-dim": "#b7c8e1",
-                    "on-primary-container": "#00285d",
-                    "tertiary-fixed-dim": "#89ceff",
-                    "inverse-primary": "#005ac2",
-                    "surface-container-lowest": "#0b0e15",
-                    "outline-variant": "#424754",
-                    "background": "#10131a",
-                    "on-secondary-container": "#a9bad3",
-                    "on-tertiary-container": "#002d43",
-                    "surface-container": "#1d2027",
-                    "on-tertiary-fixed-variant": "#004c6e",
-                    "on-primary-fixed": "#001a42",
-                    "secondary-fixed": "#d3e4fe",
-                    "surface-container-highest": "#32353c",
-                    "on-tertiary-fixed": "#001e2f",
-                    "outline": "#8c909f",
-                    "on-tertiary": "#00344d",
-                    "primary-fixed": "#d8e2ff"
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#009ada",
+                        "on-primary-fixed-variant": "#004395",
+                        "surface-variant": "#32353c",
+                        "surface-container-high": "#272a31",
+                        "surface-tint": "#adc6ff",
+                        "on-secondary-fixed": "#0b1c30",
+                        "surface-container-low": "#191b23",
+                        "on-error": "#690005",
+                        "primary-container": "#4d8eff",
+                        "inverse-surface": "#e1e2ec",
+                        "surface-bright": "#363941",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#3a4a5f",
+                        "tertiary": "#89ceff",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "on-surface-variant": "#c2c6d6",
+                        "on-background": "#e1e2ec",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#c9e6ff",
+                        "on-primary": "#002e6a",
+                        "surface": "#10131a",
+                        "primary": "#adc6ff",
+                        "surface-dim": "#10131a",
+                        "primary-fixed-dim": "#adc6ff",
+                        "on-surface": "#e1e2ec",
+                        "error-container": "#93000a",
+                        "inverse-on-surface": "#2e3038",
+                        "on-secondary": "#213145",
+                        "secondary": "#b7c8e1",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "on-primary-container": "#00285d",
+                        "tertiary-fixed-dim": "#89ceff",
+                        "inverse-primary": "#005ac2",
+                        "surface-container-lowest": "#0b0e15",
+                        "outline-variant": "#424754",
+                        "background": "#10131a",
+                        "on-secondary-container": "#a9bad3",
+                        "on-tertiary-container": "#002d43",
+                        "surface-container": "#1d2027",
+                        "on-tertiary-fixed-variant": "#004c6e",
+                        "on-primary-fixed": "#001a42",
+                        "secondary-fixed": "#d3e4fe",
+                        "surface-container-highest": "#32353c",
+                        "on-tertiary-fixed": "#001e2f",
+                        "outline": "#8c909f",
+                        "on-tertiary": "#00344d",
+                        "primary-fixed": "#d8e2ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-padding-mobile": "48px",
+                        "container-max": "1120px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "code-block": ["JetBrains Mono", "monospace"],
+                        "body": ["Geist", "sans-serif"],
+                        "display": ["Geist", "sans-serif"]
+                    }
+                },
             },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "section-padding-mobile": "48px",
-                    "container-max": "1120px",
-                    "gutter": "24px"
-            },
-            "fontFamily": {
-                    "code-block": ["JetBrains Mono", "monospace"],
-                    "body": ["Geist", "sans-serif"],
-                    "display": ["Geist", "sans-serif"]
-            }
-          },
-        },
-      }
+        }
     </script>
     <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+
         .lift-glow {
             transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         .lift-glow:hover {
             transform: translateY(-4px);
             border-color: #adc6ff;
             box-shadow: 0 8px 30px rgba(173, 198, 255, 0.08);
         }
+
         .active-tab {
             color: #adc6ff;
             border-bottom: 2px solid #adc6ff;
         }
+
         .timeline-line {
             background-image: linear-gradient(to bottom, #424754 50%, transparent 50%);
             background-size: 1px 8px;
         }
+
         body {
             background-color: #10131a;
             color: #e1e2ec;
             font-family: 'Geist', sans-serif;
         }
+
         ::selection {
             background-color: #4d8eff;
             color: #001a42;
         }
     </style>
 </head>
+
 <body class="overflow-x-hidden antialiased">
     <!-- TopNavBar -->
     <header class="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-md border-b border-outline-variant">
@@ -134,26 +149,33 @@
             </a>
             <div class="hidden md:flex gap-8 items-center text-sm font-medium">
                 <a class="text-on-surface-variant hover:text-primary transition-colors" href="#sobre">Sobre Mim</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#experiencia">Experiência</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#habilidades">Habilidades</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors"
+                    href="#experiencia">Experiência</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors"
+                    href="#habilidades">Habilidades</a>
                 <a class="text-on-surface-variant hover:text-primary transition-colors" href="#projetos">Projetos</a>
                 <a class="text-on-surface-variant hover:text-primary transition-colors" href="#contato">Contato</a>
-                <a href="https://github.com/SchweetzzZ" target="_blank" rel="noopener noreferrer" class="bg-primary text-on-primary px-5 py-2 rounded-lg font-semibold transition-all hover:opacity-90 flex items-center gap-2">
+                <a href="https://github.com/SchweetzzZ" target="_blank" rel="noopener noreferrer"
+                    class="bg-primary text-on-primary px-5 py-2 rounded-lg font-semibold transition-all hover:opacity-90 flex items-center gap-2">
                     <span class="material-symbols-outlined text-lg">code</span> GitHub
                 </a>
             </div>
-            <button id="mobile-menu-btn" class="md:hidden text-on-background p-2 focus:outline-none" aria-label="Abrir Menu">
+            <button id="mobile-menu-btn" class="md:hidden text-on-background p-2 focus:outline-none"
+                aria-label="Abrir Menu">
                 <span class="material-symbols-outlined text-2xl" id="menu-icon">menu</span>
             </button>
         </nav>
         <!-- Mobile Dropdown Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-surface-container border-b border-outline-variant px-6 py-4 flex flex-col gap-3 text-sm font-medium">
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-surface-container border-b border-outline-variant px-6 py-4 flex flex-col gap-3 text-sm font-medium">
             <a class="text-on-surface-variant hover:text-primary py-2 transition-colors" href="#sobre">Sobre Mim</a>
-            <a class="text-on-surface-variant hover:text-primary py-2 transition-colors" href="#experiencia">Experiência</a>
+            <a class="text-on-surface-variant hover:text-primary py-2 transition-colors"
+                href="#experiencia">Experiência</a>
             <a class="text-on-surface-variant hover:text-primary transition-colors" href="#habilidades">Habilidades</a>
             <a class="text-on-surface-variant hover:text-primary transition-colors" href="#projetos">Projetos</a>
             <a class="text-on-surface-variant hover:text-primary py-2 transition-colors" href="#contato">Contato</a>
-            <a href="https://github.com/SchweetzzZ" target="_blank" rel="noopener noreferrer" class="bg-primary text-on-primary text-center py-2.5 rounded-lg font-bold hover:opacity-90 transition-all flex items-center justify-center gap-2">
+            <a href="https://github.com/SchweetzzZ" target="_blank" rel="noopener noreferrer"
+                class="bg-primary text-on-primary text-center py-2.5 rounded-lg font-bold hover:opacity-90 transition-all flex items-center justify-center gap-2">
                 <span class="material-symbols-outlined text-lg">code</span> Ver GitHub
             </a>
         </div>
@@ -163,29 +185,33 @@
     <section class="relative min-h-[90vh] flex flex-col justify-center pt-28 pb-16" id="sobre">
         <div class="max-w-container-max mx-auto px-gutter w-full">
             <!-- Header Badges and Title -->
-            <div class="max-w-3xl mb-12">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container border border-outline-variant text-xs font-code-block text-primary mb-6">
+            <div class="max-w-4xl mb-12">
+                <div
+                    class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container border border-outline-variant text-xs font-code-block text-primary mb-6">
                     <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                     <span>21 anos · Juazeiro - BA · Disponível para Oportunidades</span>
                 </div>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 leading-tight">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-3 leading-tight">
                     Jônatas Caçula Soares
                 </h1>
-                <p class="text-xl md:text-2xl font-semibold text-tertiary mb-6">
+                <p class="text-base md:text-lg font-medium text-tertiary mb-6">
                     Desenvolvedor Backend <span class="text-on-surface-variant font-normal">| TypeScript · Nest.js · Elysia.js · PostgreSQL · Java</span>
                 </p>
 
                 <!-- Contact Badges / Quick Links -->
                 <div class="flex flex-wrap gap-3 mb-8 text-sm">
-                    <a href="https://github.com/SchweetzzZ" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-surface-container hover:bg-surface-container-high px-4 py-2 rounded-lg border border-outline-variant text-on-surface transition-all">
+                    <a href="https://github.com/SchweetzzZ" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-2 bg-surface-container hover:bg-surface-container-high px-4 py-2 rounded-lg border border-outline-variant text-on-surface transition-all">
                         <span class="material-symbols-outlined text-primary text-lg">code</span>
                         <span>github.com/SchweetzzZ</span>
                     </a>
-                    <a href="mailto:jonatas_kp32@hotmail.com" class="flex items-center gap-2 bg-surface-container hover:bg-surface-container-high px-4 py-2 rounded-lg border border-outline-variant text-on-surface transition-all">
+                    <a href="mailto:jonatas_kp32@hotmail.com"
+                        class="flex items-center gap-2 bg-surface-container hover:bg-surface-container-high px-4 py-2 rounded-lg border border-outline-variant text-on-surface transition-all">
                         <span class="material-symbols-outlined text-primary text-lg">mail</span>
                         <span>jonatas_kp32@hotmail.com</span>
                     </a>
-                    <a href="https://wa.me/5574988151254" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-surface-container hover:bg-surface-container-high px-4 py-2 rounded-lg border border-outline-variant text-on-surface transition-all">
+                    <a href="https://wa.me/5574988151254" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-2 bg-surface-container hover:bg-surface-container-high px-4 py-2 rounded-lg border border-outline-variant text-on-surface transition-all">
                         <span class="material-symbols-outlined text-primary text-lg">call</span>
                         <span>(74) 98815-1254</span>
                     </a>
@@ -193,10 +219,12 @@
 
                 <!-- Call to action buttons -->
                 <div class="flex flex-wrap gap-4">
-                    <a href="#experiencia" class="bg-primary text-on-primary px-7 py-3 rounded-lg font-semibold hover:opacity-90 transition-all flex items-center gap-2">
+                    <a href="#experiencia"
+                        class="bg-primary text-on-primary px-7 py-3 rounded-lg font-semibold hover:opacity-90 transition-all flex items-center gap-2">
                         Ver Experiência <span class="material-symbols-outlined text-lg">arrow_downward</span>
                     </a>
-                    <a href="#projetos" class="border border-outline hover:bg-surface-container px-7 py-3 rounded-lg font-semibold transition-all flex items-center gap-2 text-on-surface">
+                    <a href="#projetos"
+                        class="border border-outline hover:bg-surface-container px-7 py-3 rounded-lg font-semibold transition-all flex items-center gap-2 text-on-surface">
                         Ver Projetos <span class="material-symbols-outlined text-lg">folder</span>
                     </a>
                 </div>
@@ -209,23 +237,35 @@
                         <span class="w-6 h-[2px] bg-primary"></span> Objetivo Profissional
                     </h2>
                     <p class="text-on-surface-variant leading-relaxed text-base">
-                        Desenvolvedor Back-End com <strong>10 meses de experiência profissional</strong> no desenvolvimento de APIs REST. Busco uma oportunidade como <strong>Desenvolvedor Júnior</strong> para aplicar meus conhecimentos em TypeScript, Node.js, Bun e arquitetura de software.
+                        Desenvolvedor Back-End com <strong>10 meses de experiência profissional</strong> no
+                        desenvolvimento de APIs REST. Busco uma oportunidade como <strong>Desenvolvedor Júnior</strong>
+                        para aplicar meus conhecimentos em TypeScript, Node.js, Bun e arquitetura de software.
                     </p>
                     <p class="text-on-surface-variant leading-relaxed text-base">
-                        Possuo experiência prática em autenticação (Better-Auth, JWT), testes automatizados (Jest), bancos de dados SQL/NoSQL (PostgreSQL, MongoDB, Redis), ORMs (Drizzle, Prisma), integração com serviços Cloud (AWS S3, Cloudflare R2), ambientes conteinerizados (Docker) e deploy contínuo (Dokploy, GitHub Actions CI/CD).
+                        Possuo experiência prática em autenticação (Better-Auth, JWT), testes automatizados (Jest),
+                        bancos de dados SQL/NoSQL (PostgreSQL, MongoDB, Redis), ORMs (Drizzle, Prisma), integração com
+                        serviços Cloud (AWS S3, Cloudflare R2), ambientes conteinerizados (Docker) e deploy contínuo
+                        (Dokploy, GitHub Actions CI/CD).
                     </p>
                     <p class="text-on-surface-variant leading-relaxed text-base">
-                        Também venho aprofundando meus conhecimentos no ecossistema <strong>Java (Spring Boot, Spring Security, PostgreSQL)</strong> para a construção de soluções backend escaláveis e desacopladas. Focado em qualidade de código, princípios SOLID, Clean Code e aprendizado contínuo.
+                        Também venho aprofundando meus conhecimentos no ecossistema <strong>Java (Spring Boot, Spring
+                            Security, PostgreSQL)</strong> para a construção de soluções backend escaláveis e
+                        desacopladas. Focado em qualidade de código, princípios SOLID, Clean Code e aprendizado
+                        contínuo.
                     </p>
                 </div>
-                
-                <div class="md:col-span-4 bg-surface-container p-6 rounded-xl border border-outline-variant flex flex-col justify-between">
+
+                <div
+                    class="md:col-span-4 bg-surface-container p-6 rounded-xl border border-outline-variant flex flex-col justify-between">
                     <div>
-                        <h3 class="text-xs font-code-block text-primary uppercase tracking-wider mb-2">Formação Acadêmica</h3>
+                        <h3 class="text-xs font-code-block text-primary uppercase tracking-wider mb-2">Formação
+                            Acadêmica</h3>
                         <p class="font-bold text-lg text-on-background mb-1">Análise e Desenvolvimento de Sistemas</p>
                         <p class="text-sm text-on-surface-variant mb-4">Graduação em andamento</p>
-                        <div class="inline-flex items-center gap-2 bg-surface-container-high px-3 py-1.5 rounded text-xs font-code-block text-secondary">
-                            <span class="material-symbols-outlined text-sm">calendar_today</span> Previsão de Conclusão: 2026
+                        <div
+                            class="inline-flex items-center gap-2 bg-surface-container-high px-3 py-1.5 rounded text-xs font-code-block text-secondary">
+                            <span class="material-symbols-outlined text-sm">calendar_today</span> Previsão de Conclusão:
+                            2026
                         </div>
                     </div>
                     <div class="mt-6 pt-4 border-t border-outline-variant flex items-center gap-3">
@@ -248,29 +288,36 @@
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
                 <div>
                     <h2 class="text-3xl font-bold mb-2">Experiência Profissional</h2>
-                    <p class="text-on-surface-variant max-w-xl">Atuação prática com entrega de código em ambiente de homologação e produção VPS.</p>
+                    <p class="text-on-surface-variant max-w-xl">Atuação prática com entrega de código em ambiente de
+                        homologação e produção VPS.</p>
                 </div>
-                <span class="text-xs font-code-block bg-primary-container/20 text-primary px-3 py-1.5 rounded-full border border-primary/20">
+                <span
+                    class="text-xs font-code-block bg-primary-container/20 text-primary px-3 py-1.5 rounded-full border border-primary/20">
                     10 Meses de Experiência Prática
                 </span>
             </div>
 
             <!-- Job Card -->
             <div class="bg-surface-container rounded-xl p-8 border border-outline-variant lift-glow">
-                <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-6 gap-4 border-b border-outline-variant pb-6">
+                <div
+                    class="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-6 gap-4 border-b border-outline-variant pb-6">
                     <div>
                         <div class="flex flex-wrap items-center gap-3 mb-2">
                             <h3 class="text-2xl font-bold text-on-background">PREFEITURA DE JUAZEIRO-BA</h3>
-                            <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold rounded-full">
+                            <span
+                                class="px-3 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold rounded-full">
                                 Estágio Backend
                             </span>
                         </div>
                         <p class="text-lg font-semibold text-primary mb-1">
-                            Projeto Jua-Market <span class="text-xs font-normal text-on-surface-variant font-code-block">(Marketplace Municipal em VPS de Homologação)</span>
+                            Projeto Jua-Market <span
+                                class="text-xs font-normal text-on-surface-variant font-code-block">(Marketplace
+                                Municipal em VPS de Homologação)</span>
                         </p>
                     </div>
                     <div class="text-left lg:text-right">
-                        <span class="font-code-block text-sm text-secondary bg-surface-container-high px-3 py-1.5 rounded-lg border border-outline-variant inline-block">
+                        <span
+                            class="font-code-block text-sm text-secondary bg-surface-container-high px-3 py-1.5 rounded-lg border border-outline-variant inline-block">
                             14/09/2025 — Atual
                         </span>
                     </div>
@@ -278,18 +325,32 @@
 
                 <!-- Technologies Badges -->
                 <div class="mb-8">
-                    <p class="text-xs font-code-block text-on-surface-variant uppercase tracking-wider mb-3">Stack Utilizada:</p>
+                    <p class="text-xs font-code-block text-on-surface-variant uppercase tracking-wider mb-3">Stack
+                        Utilizada:</p>
                     <div class="flex flex-wrap gap-2 text-xs font-code-block">
-                        <span class="px-2.5 py-1 bg-surface-container-high border border-outline-variant rounded text-primary">Elysia.js</span>
-                        <span class="px-2.5 py-1 bg-surface-container-high border border-outline-variant rounded text-primary">Bun</span>
-                        <span class="px-2.5 py-1 bg-surface-container-high border border-outline-variant rounded text-primary">TypeScript</span>
-                        <span class="px-2.5 py-1 bg-surface-container-high border border-outline-variant rounded text-primary">PostgreSQL</span>
-                        <span class="px-2.5 py-1 bg-surface-container-high border border-outline-variant rounded text-primary">Drizzle ORM</span>
-                        <span class="px-2.5 py-1 bg-surface-container-high border border-outline-variant rounded text-primary">Better-Auth</span>
-                        <span class="px-2.5 py-1 bg-surface-container-high border border-outline-variant rounded text-primary">AWS S3 / Cloudflare R2</span>
-                        <span class="px-2.5 py-1 bg-surface-container-high border border-outline-variant rounded text-primary">Redis</span>
-                        <span class="px-2.5 py-1 bg-surface-container-high border border-outline-variant rounded text-primary">Docker</span>
-                        <span class="px-2.5 py-1 bg-surface-container-high border border-outline-variant rounded text-primary">Dokploy CI/CD</span>
+                        <span
+                            class="px-2.5 py-1 bg-surface-container-high border border-outline-variant rounded text-primary">Elysia.js</span>
+                        <span
+                            class="px-2.5 py-1 bg-surface-container-high border border-outline-variant rounded text-primary">Bun</span>
+                        <span
+                            class="px-2.5 py-1 bg-surface-container-high border border-outline-variant rounded text-primary">TypeScript</span>
+                        <span
+                            class="px-2.5 py-1 bg-surface-container-high border border-outline-variant rounded text-primary">PostgreSQL</span>
+                        <span
+                            class="px-2.5 py-1 bg-surface-container-high border border-outline-variant rounded text-primary">Drizzle
+                            ORM</span>
+                        <span
+                            class="px-2.5 py-1 bg-surface-container-high border border-outline-variant rounded text-primary">Better-Auth</span>
+                        <span
+                            class="px-2.5 py-1 bg-surface-container-high border border-outline-variant rounded text-primary">AWS
+                            S3 / Cloudflare R2</span>
+                        <span
+                            class="px-2.5 py-1 bg-surface-container-high border border-outline-variant rounded text-primary">Redis</span>
+                        <span
+                            class="px-2.5 py-1 bg-surface-container-high border border-outline-variant rounded text-primary">Docker</span>
+                        <span
+                            class="px-2.5 py-1 bg-surface-container-high border border-outline-variant rounded text-primary">Dokploy
+                            CI/CD</span>
                     </div>
                 </div>
 
@@ -297,31 +358,47 @@
                 <div class="space-y-4 text-on-surface-variant text-sm leading-relaxed">
                     <div class="flex items-start gap-3">
                         <span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
-                        <p><strong>Deploy Automatizado & CI/CD:</strong> Construção de fluxo de deploy automatizado utilizando Docker, Dokploy e pipeline CI/CD completa, realizando entregas contínuas via integração com Git e atualização automática dos serviços no ambiente VPS de homologação.</p>
+                        <p><strong>Deploy Automatizado & CI/CD:</strong> Construção de fluxo de deploy automatizado
+                            utilizando Docker, Dokploy e pipeline CI/CD completa, realizando entregas contínuas via
+                            integração com Git e atualização automática dos serviços no ambiente VPS de homologação.</p>
                     </div>
                     <div class="flex items-start gap-3">
                         <span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
-                        <p><strong>Sistema de Onboarding com Transações Atômicas:</strong> Desenvolvimento do módulo de cadastro e aprovação administrativa de vendedores, utilizando transações com Drizzle ORM para garantir atomicidade entre validação de documentos, alteração de permissões (RBAC) e criação da loja.</p>
+                        <p><strong>Sistema de Onboarding com Transações Atômicas:</strong> Desenvolvimento do módulo de
+                            cadastro e aprovação administrativa de vendedores, utilizando transações com Drizzle ORM
+                            para garantir atomicidade entre validação de documentos, alteração de permissões (RBAC) e
+                            criação da loja.</p>
                     </div>
                     <div class="flex items-start gap-3">
                         <span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
-                        <p><strong>Estratégia de Cache com Redis:</strong> Implementação de padrão Cache-Aside com Redis para dados de alta frequência de leitura, com invalidação explícita pós-escrita garantindo consistência estrita entre cache e PostgreSQL.</p>
+                        <p><strong>Estratégia de Cache com Redis:</strong> Implementação de padrão Cache-Aside com Redis
+                            para dados de alta frequência de leitura, com invalidação explícita pós-escrita garantindo
+                            consistência estrita entre cache e PostgreSQL.</p>
                     </div>
                     <div class="flex items-start gap-3">
                         <span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
-                        <p><strong>Queries Avançadas & Performance SQL:</strong> Construção de consultas complexas no Drizzle ORM (double self-join com alias, busca em lote de imagens com <code>inArray</code> para eliminação do problema N+1 e paginação server-side fortemente tipada).</p>
+                        <p><strong>Queries Avançadas & Performance SQL:</strong> Construção de consultas complexas no
+                            Drizzle ORM (double self-join com alias, busca em lote de imagens com <code>inArray</code>
+                            para eliminação do problema N+1 e paginação server-side fortemente tipada).</p>
                     </div>
                     <div class="flex items-start gap-3">
                         <span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
-                        <p><strong>Controle de Acesso (RBAC Declarativo):</strong> Implementação de controle de acesso via Elysia Macro, encapsulando a validação de sessão em decorators reutilizáveis que injetam o contexto do usuário ou retornam erro 401 automaticamente.</p>
+                        <p><strong>Controle de Acesso (RBAC Declarativo):</strong> Implementação de controle de acesso
+                            via Elysia Macro, encapsulando a validação de sessão em decorators reutilizáveis que injetam
+                            o contexto do usuário ou retornam erro 401 automaticamente.</p>
                     </div>
                     <div class="flex items-start gap-3">
                         <span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
-                        <p><strong>Autenticação com Better-Auth & Resend:</strong> Integração de Better-Auth com plugin administrativo e fluxo de recuperação de senha via Resend, utilizando importação dinâmica para isolamento completo de dependências na inicialização da aplicação.</p>
+                        <p><strong>Autenticação com Better-Auth & Resend:</strong> Integração de Better-Auth com plugin
+                            administrativo e fluxo de recuperação de senha via Resend, utilizando importação dinâmica
+                            para isolamento completo de dependências na inicialização da aplicação.</p>
                     </div>
                     <div class="flex items-start gap-3">
                         <span class="material-symbols-outlined text-primary text-lg mt-0.5">check_circle</span>
-                        <p><strong>Upload Otimizado em Nuvem (Presigned URLs):</strong> Arquitetura de upload de mídia utilizando Presigned URLs diretas na AWS S3 / Cloudflare R2, eliminando o processamento de arquivos pesados pelo servidor backend e reduzindo significativamente a latência e os custos de egress.</p>
+                        <p><strong>Upload Otimizado em Nuvem (Presigned URLs):</strong> Arquitetura de upload de mídia
+                            utilizando Presigned URLs diretas na AWS S3 / Cloudflare R2, eliminando o processamento de
+                            arquivos pesados pelo servidor backend e reduzindo significativamente a latência e os custos
+                            de egress.</p>
                     </div>
                 </div>
             </div>
@@ -332,7 +409,8 @@
     <section class="py-20 bg-background" id="habilidades">
         <div class="max-w-container-max mx-auto px-gutter">
             <h2 class="text-3xl font-bold mb-2 text-center">Habilidades Técnicas</h2>
-            <p class="text-on-surface-variant text-center max-w-xl mx-auto mb-12">Tecnologias, linguagens e padrões arquiteturais aplicados no meu dia a dia de desenvolvimento.</p>
+            <p class="text-on-surface-variant text-center max-w-xl mx-auto mb-12">Tecnologias, linguagens e padrões
+                arquiteturais aplicados no meu dia a dia de desenvolvimento.</p>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Group 1 -->
@@ -342,12 +420,26 @@
                     </div>
                     <h3 class="text-lg font-bold mb-4">Linguagens & Frameworks</h3>
                     <ul class="space-y-2 text-sm text-on-surface-variant font-code-block">
-                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2"><span>TypeScript / JavaScript</span> <span class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Avançado</span></li>
-                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2"><span>Node.js / Bun</span> <span class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span></li>
-                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2"><span>Elysia.js / NestJS</span> <span class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span></li>
-                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2"><span>Java / Spring Boot</span> <span class="text-xs text-tertiary bg-tertiary/10 px-2 py-0.5 rounded">Em Estudo</span></li>
-                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2"><span>REST APIs / WebSockets</span> <span class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span></li>
-                        <li class="flex items-center justify-between"><span>Kafka / RabbitMQ</span> <span class="text-xs text-secondary bg-secondary/10 px-2 py-0.5 rounded">Prático</span></li>
+                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2">
+                            <span>TypeScript / JavaScript</span> <span
+                                class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Avançado</span>
+                        </li>
+                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2">
+                            <span>Node.js / Bun</span> <span
+                                class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span>
+                        </li>
+                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2">
+                            <span>Elysia.js / NestJS</span> <span
+                                class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span>
+                        </li>
+                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2"><span>Java
+                                / Spring Boot</span> <span
+                                class="text-xs text-tertiary bg-tertiary/10 px-2 py-0.5 rounded">Em Estudo</span></li>
+                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2"><span>REST
+                                APIs / WebSockets</span> <span
+                                class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span></li>
+                        <li class="flex items-center justify-between"><span>Kafka / RabbitMQ</span> <span
+                                class="text-xs text-secondary bg-secondary/10 px-2 py-0.5 rounded">Prático</span></li>
                     </ul>
                 </div>
 
@@ -358,12 +450,27 @@
                     </div>
                     <h3 class="text-lg font-bold mb-4">Bancos de Dados & DevOps</h3>
                     <ul class="space-y-2 text-sm text-on-surface-variant font-code-block">
-                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2"><span>PostgreSQL</span> <span class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span></li>
-                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2"><span>MongoDB / Redis</span> <span class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span></li>
-                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2"><span>Drizzle ORM / Prisma</span> <span class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span></li>
-                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2"><span>Docker / Dokploy</span> <span class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span></li>
-                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2"><span>AWS S3 / Cloudflare R2</span> <span class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Prático</span></li>
-                        <li class="flex items-center justify-between"><span>GitHub Actions (CI/CD)</span> <span class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span></li>
+                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2">
+                            <span>PostgreSQL</span> <span
+                                class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span>
+                        </li>
+                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2">
+                            <span>MongoDB / Redis</span> <span
+                                class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span>
+                        </li>
+                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2">
+                            <span>Drizzle ORM / Prisma</span> <span
+                                class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span>
+                        </li>
+                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2">
+                            <span>Docker / Dokploy</span> <span
+                                class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span>
+                        </li>
+                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2"><span>AWS
+                                S3 / Cloudflare R2</span> <span
+                                class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Prático</span></li>
+                        <li class="flex items-center justify-between"><span>GitHub Actions (CI/CD)</span> <span
+                                class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span></li>
                     </ul>
                 </div>
 
@@ -374,12 +481,28 @@
                     </div>
                     <h3 class="text-lg font-bold mb-4">Competências Arquiteturais</h3>
                     <ul class="space-y-2 text-sm text-on-surface-variant font-code-block">
-                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2"><span>Arquitetura em Camadas</span> <span class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span></li>
-                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2"><span>Princípios SOLID & Clean Code</span> <span class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span></li>
-                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2"><span>Controle de Acesso RBAC</span> <span class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span></li>
-                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2"><span>Testes Unitários (Jest)</span> <span class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span></li>
-                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2"><span>Arquitetura orientada a eventos</span> <span class="text-xs text-secondary bg-secondary/10 px-2 py-0.5 rounded">Prático</span></li>
-                        <li class="flex items-center justify-between"><span>Autenticação JWT / Better-Auth</span> <span class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span></li>
+                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2">
+                            <span>Arquitetura em Camadas</span> <span
+                                class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span>
+                        </li>
+                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2">
+                            <span>Princípios SOLID & Clean Code</span> <span
+                                class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span>
+                        </li>
+                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2">
+                            <span>Controle de Acesso RBAC</span> <span
+                                class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span>
+                        </li>
+                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2">
+                            <span>Testes Unitários (Jest)</span> <span
+                                class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span>
+                        </li>
+                        <li class="flex items-center justify-between border-b border-outline-variant/40 pb-2">
+                            <span>Arquitetura orientada a eventos</span> <span
+                                class="text-xs text-secondary bg-secondary/10 px-2 py-0.5 rounded">Prático</span>
+                        </li>
+                        <li class="flex items-center justify-between"><span>Autenticação JWT / Better-Auth</span> <span
+                                class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded">Forte</span></li>
                     </ul>
                 </div>
             </div>
@@ -392,37 +515,53 @@
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
                 <div>
                     <h2 class="text-3xl font-bold mb-2">Projetos Pessoais & Destaques</h2>
-                    <p class="text-on-surface-variant max-w-lg">Aplicações construídas para resolver problemas complexos com alta performance e boas práticas.</p>
+                    <p class="text-on-surface-variant max-w-lg">Aplicações construídas para resolver problemas complexos
+                        com alta performance e boas práticas.</p>
                 </div>
                 <!-- Navigation Tabs -->
                 <div class="flex gap-4 border-b border-outline-variant w-full md:w-auto">
-                    <button class="font-code-block text-xs pb-3 active-tab uppercase tracking-wider transition-all font-semibold" id="tab-ts" onclick="switchTab('ts')">TypeScript Ecosystem</button>
-                    <button class="font-code-block text-xs pb-3 text-on-surface-variant uppercase tracking-wider hover:text-primary transition-all font-semibold" id="tab-java" onclick="switchTab('java') font-semibold">Java / Spring Boot</button>
+                    <button
+                        class="font-code-block text-xs pb-3 active-tab uppercase tracking-wider transition-all font-semibold"
+                        id="tab-ts" onclick="switchTab('ts')">TypeScript Ecosystem</button>
+                    <button
+                        class="font-code-block text-xs pb-3 text-on-surface-variant uppercase tracking-wider hover:text-primary transition-all font-semibold"
+                        id="tab-java" onclick="switchTab('java')">Java / Spring Boot</button>
                 </div>
             </div>
 
             <!-- Project Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="project-container">
-                
+
                 <!-- Project 1: Emergence Route -->
-                <div class="project-item ts-project group flex flex-col bg-surface-container rounded-xl border border-outline-variant lift-glow overflow-hidden">
+                <div
+                    class="project-item ts-project group flex flex-col bg-surface-container rounded-xl border border-outline-variant lift-glow overflow-hidden">
                     <div class="p-8 flex flex-col flex-grow">
                         <div class="flex justify-between items-start mb-4">
                             <h3 class="text-xl font-bold text-on-background">Emergence Route</h3>
-                            <span class="font-code-block text-xs px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full">NestJS · Event-Driven</span>
+                            <span
+                                class="font-code-block text-xs px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full">NestJS
+                                · Event-Driven</span>
                         </div>
-                        <p class="text-sm text-secondary font-medium mb-4">Sistema de Despacho de Emergências em Tempo Real</p>
+                        <p class="text-sm text-secondary font-medium mb-4">Sistema de Despacho de Emergências em Tempo
+                            Real</p>
                         <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
-                            Sistema back-end para gerenciamento e despacho de unidades de emergência. Desenvolvido com arquitetura baseada em eventos, comunicação assíncrona via Kafka e RabbitMQ, rastreamento em tempo real com WebSockets e persistência de dados em PostgreSQL. Utilizou-se Redis para otimização de desempenho e Docker com pipeline CI/CD via GitHub Actions.
+                            Sistema back-end para gerenciamento e despacho de unidades de emergência. Desenvolvido com
+                            arquitetura baseada em eventos, comunicação assíncrona via Kafka e RabbitMQ, rastreamento em
+                            tempo real com WebSockets e persistência de dados em PostgreSQL. Utilizou-se Redis para
+                            otimização de desempenho e Docker com pipeline CI/CD via GitHub Actions.
                         </p>
-                        
+
                         <div class="mb-6 bg-surface-container-high p-4 rounded-lg border border-outline-variant">
                             <h4 class="text-xs font-code-block text-primary mb-2 uppercase">Stack Tecnológica:</h4>
-                            <p class="text-xs font-code-block text-on-surface-variant">TypeScript · NestJS · PostgreSQL · Prisma ORM · Redis · Kafka · RabbitMQ · Socket.IO · Docker · GitHub Actions (CI/CD)</p>
+                            <p class="text-xs font-code-block text-on-surface-variant">TypeScript · NestJS · PostgreSQL
+                                · Prisma ORM · Redis · Kafka · RabbitMQ · Socket.IO · Docker · GitHub Actions (CI/CD)
+                            </p>
                         </div>
 
                         <div class="mt-auto flex gap-4 pt-4 border-t border-outline-variant">
-                            <a href="https://github.com/SchweetzzZ" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-primary text-sm font-bold hover:underline">
+                            <a href="https://github.com/SchweetzzZ/emergency-route" target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex items-center gap-2 text-primary text-sm font-bold hover:underline">
                                 <span class="material-symbols-outlined text-lg">code</span> Código no GitHub
                             </a>
                         </div>
@@ -430,24 +569,34 @@
                 </div>
 
                 <!-- Project 2: Queue-project -->
-                <div class="project-item ts-project group flex flex-col bg-surface-container rounded-xl border border-outline-variant lift-glow overflow-hidden">
+                <div
+                    class="project-item ts-project group flex flex-col bg-surface-container rounded-xl border border-outline-variant lift-glow overflow-hidden">
                     <div class="p-8 flex flex-col flex-grow">
                         <div class="flex justify-between items-start mb-4">
                             <h3 class="text-xl font-bold text-on-background">Queue-project</h3>
-                            <span class="font-code-block text-xs px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full">NestJS · Multi-Tenant</span>
+                            <span
+                                class="font-code-block text-xs px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full">NestJS
+                                · Multi-Tenant</span>
                         </div>
-                        <p class="text-sm text-secondary font-medium mb-4">Sistema de Atendimento em Fila com Chat em Tempo Real</p>
+                        <p class="text-sm text-secondary font-medium mb-4">Sistema de Atendimento em Fila com Chat em
+                            Tempo Real</p>
                         <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
-                            Sistema back-end multi-tenant para gerenciamento de filas de atendimento com comunicação em tempo real. Desenvolvido com arquitetura modular no NestJS, persistência em PostgreSQL via Prisma ORM e Redis como estrutura de fila em memória para operações de alta performance. Conta com autenticação stateless com JWT, gateway WebSockets e pipeline CI/CD automatizada.
+                            Sistema back-end multi-tenant para gerenciamento de filas de atendimento com comunicação em
+                            tempo real. Desenvolvido com arquitetura modular no NestJS, persistência em PostgreSQL via
+                            Prisma ORM e Redis como estrutura de fila em memória para operações de alta performance.
+                            Conta com autenticação stateless com JWT, gateway WebSockets e pipeline CI/CD automatizada.
                         </p>
-                        
+
                         <div class="mb-6 bg-surface-container-high p-4 rounded-lg border border-outline-variant">
                             <h4 class="text-xs font-code-block text-primary mb-2 uppercase">Stack Tecnológica:</h4>
-                            <p class="text-xs font-code-block text-on-surface-variant">TypeScript · NestJS · PostgreSQL · Prisma ORM · Redis · Socket.IO · Docker · GitHub Actions (CI/CD)</p>
+                            <p class="text-xs font-code-block text-on-surface-variant">TypeScript · NestJS · PostgreSQL
+                                · Prisma ORM · Redis · Socket.IO · Docker · GitHub Actions (CI/CD)</p>
                         </div>
 
                         <div class="mt-auto flex gap-4 pt-4 border-t border-outline-variant">
-                            <a href="https://github.com/SchweetzzZ" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-primary text-sm font-bold hover:underline">
+                            <a href="https://github.com/SchweetzzZ/queue-project" target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex items-center gap-2 text-primary text-sm font-bold hover:underline">
                                 <span class="material-symbols-outlined text-lg">code</span> Código no GitHub
                             </a>
                         </div>
@@ -455,24 +604,36 @@
                 </div>
 
                 <!-- Project 3: Java / Spring Boot Ecosystem (Shown when Java tab active) -->
-                <div class="project-item java-project hidden col-span-1 md:col-span-2 group flex flex-col bg-surface-container rounded-xl border border-outline-variant lift-glow overflow-hidden">
+                <div
+                    class="project-item java-project hidden col-span-1 md:col-span-2 group flex flex-col bg-surface-container rounded-xl border border-outline-variant lift-glow overflow-hidden">
                     <div class="p-8 flex flex-col flex-grow">
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-on-background">Projetos & Aprofundamento no Ecossistema Java</h3>
-                            <span class="font-code-block text-xs px-3 py-1 bg-tertiary/10 text-tertiary border border-tertiary/20 rounded-full">Spring Boot · PostgreSQL</span>
+                            <h3 class="text-xl font-bold text-on-background">Projetos & Aprofundamento no Ecossistema
+                                Java</h3>
+                            <span
+                                class="font-code-block text-xs px-3 py-1 bg-tertiary/10 text-tertiary border border-tertiary/20 rounded-full">Spring
+                                Boot · PostgreSQL</span>
                         </div>
-                        <p class="text-sm text-tertiary font-medium mb-4">Aplicações Robustas com Spring Boot, Spring Security e JPA</p>
+                        <p class="text-sm text-tertiary font-medium mb-4">Aplicações Robustas com Spring Boot, Spring
+                            Security e JPA</p>
                         <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
-                            Além da atuação diária com o ecossistema Node/Bun/TypeScript, venho aprofundando meus conhecimentos no ecossistema <strong>Java</strong> desenvolvendo APIs REST escaláveis com <strong>Spring Boot 3, Spring Security (JWT / OAuth2), JPA / Hibernate e PostgreSQL</strong>. Aplicando arquitetura limpa, tratamento global de exceções, migrations com Flyway/Liquibase e testes automatizados.
+                            Além da atuação diária com o ecossistema Node/Bun/TypeScript, venho aprofundando meus
+                            conhecimentos no ecossistema <strong>Java</strong> desenvolvendo APIs REST escaláveis com
+                            <strong>Spring Boot 3, Spring Security (JWT / OAuth2), JPA / Hibernate e
+                                PostgreSQL</strong>. Aplicando arquitetura limpa, tratamento global de exceções,
+                            migrations com Flyway/Liquibase e testes automatizados.
                         </p>
-                        
+
                         <div class="mb-6 bg-surface-container-high p-4 rounded-lg border border-outline-variant">
-                            <h4 class="text-xs font-code-block text-tertiary mb-2 uppercase">Conhecimentos Aplicados em Java:</h4>
-                            <p class="text-xs font-code-block text-on-surface-variant">Java 17/21 · Spring Boot 3 · Spring Security · JPA / Hibernate · PostgreSQL · Maven / Gradle · Docker</p>
+                            <h4 class="text-xs font-code-block text-tertiary mb-2 uppercase">Conhecimentos Aplicados em
+                                Java:</h4>
+                            <p class="text-xs font-code-block text-on-surface-variant">Java 17/21 · Spring Boot 3 ·
+                                Spring Security · JPA / Hibernate · PostgreSQL · Maven / Gradle · Docker</p>
                         </div>
 
                         <div class="mt-auto flex gap-4 pt-4 border-t border-outline-variant">
-                            <a href="https://github.com/SchweetzzZ" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-tertiary text-sm font-bold hover:underline">
+                            <a href="https://github.com/SchweetzzZ" target="_blank" rel="noopener noreferrer"
+                                class="flex items-center gap-2 text-tertiary text-sm font-bold hover:underline">
                                 <span class="material-symbols-outlined text-lg">code</span> Repositórios no GitHub
                             </a>
                         </div>
@@ -490,74 +651,61 @@
                 <div>
                     <h2 class="text-3xl font-bold mb-4">Vamos Conversar?</h2>
                     <p class="text-on-surface-variant font-body-lg mb-8 leading-relaxed">
-                        Estou disponível para vagas como <strong>Desenvolvedor Backend Júnior / Pleno</strong> (TypeScript / Node.js / Bun / Java). Sinta-se à vontade para entrar em contato diretamente!
+                        Estou disponível para vagas como <strong>Desenvolvedor Backend Júnior / Pleno</strong>
+                        (TypeScript / Node.js / Bun / Java). Sinta-se à vontade para entrar em contato diretamente!
                     </p>
-                    
+
                     <div class="space-y-6">
-                        <div class="flex items-center gap-4 p-4 rounded-lg bg-surface-container border border-outline-variant">
-                            <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg text-primary">
+                        <div
+                            class="flex items-center gap-4 p-4 rounded-lg bg-surface-container border border-outline-variant">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg text-primary">
                                 <span class="material-symbols-outlined text-2xl">mail</span>
                             </div>
                             <div>
-                                <p class="text-xs font-code-block text-on-surface-variant uppercase">E-mail Principal</p>
-                                <a href="mailto:jonatas_kp32@hotmail.com" class="font-semibold hover:text-primary transition-colors">jonatas_kp32@hotmail.com</a>
+                                <p class="text-xs font-code-block text-on-surface-variant uppercase">E-mail Principal
+                                </p>
+                                <a href="mailto:jonatas_kp32@hotmail.com"
+                                    class="font-semibold hover:text-primary transition-colors">jonatas_kp32@hotmail.com</a>
                             </div>
                         </div>
 
-                        <div class="flex items-center gap-4 p-4 rounded-lg bg-surface-container border border-outline-variant">
-                            <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg text-primary">
+                        <div
+                            class="flex items-center gap-4 p-4 rounded-lg bg-surface-container border border-outline-variant">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg text-primary">
                                 <span class="material-symbols-outlined text-2xl">call</span>
                             </div>
                             <div>
-                                <p class="text-xs font-code-block text-on-surface-variant uppercase">Telefone / WhatsApp</p>
-                                <a href="https://wa.me/5574988151254" target="_blank" rel="noopener noreferrer" class="font-semibold hover:text-primary transition-colors">(74) 98815-1254</a>
+                                <p class="text-xs font-code-block text-on-surface-variant uppercase">Telefone / WhatsApp
+                                </p>
+                                <a href="https://wa.me/5574988151254" target="_blank" rel="noopener noreferrer"
+                                    class="font-semibold hover:text-primary transition-colors">(74) 98815-1254</a>
                             </div>
                         </div>
 
-                        <div class="flex items-center gap-4 p-4 rounded-lg bg-surface-container border border-outline-variant">
-                            <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg text-primary">
+                        <div
+                            class="flex items-center gap-4 p-4 rounded-lg bg-surface-container border border-outline-variant">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg text-primary">
                                 <span class="material-symbols-outlined text-2xl">location_on</span>
                             </div>
                             <div>
                                 <p class="text-xs font-code-block text-on-surface-variant uppercase">Localização</p>
-                                <p class="font-semibold text-on-surface">Juazeiro - BA, Brasil (Disponível para Remoto/Híbrido)</p>
+                                <p class="font-semibold text-on-surface">Juazeiro - BA, Brasil (Disponível para
+                                    Remoto/Híbrido)</p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Contact Form -->
-                <form id="contact-form" class="bg-surface-container p-8 rounded-xl border border-outline-variant">
-                    <h3 class="text-xl font-bold mb-6 text-on-background">Enviar Mensagem Direta</h3>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                        <div class="flex flex-col gap-2">
-                            <label class="text-xs font-code-block uppercase text-on-surface-variant">Nome</label>
-                            <input required class="bg-surface-container-low border border-outline-variant rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Seu nome" type="text"/>
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <label class="text-xs font-code-block uppercase text-on-surface-variant">E-mail</label>
-                            <input required class="bg-surface-container-low border border-outline-variant rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="seu@email.com" type="email"/>
-                        </div>
-                    </div>
-                    
-                    <div class="flex flex-col gap-2 mb-6">
-                        <label class="text-xs font-code-block uppercase text-on-surface-variant">Mensagem</label>
-                        <textarea required class="bg-surface-container-low border border-outline-variant rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Escreva sua mensagem aqui..." rows="4"></textarea>
-                    </div>
-
-                    <button class="w-full bg-primary text-on-primary py-3.5 rounded-lg font-bold hover:opacity-90 transition-all flex items-center justify-center gap-2" type="submit">
-                        Enviar Mensagem <span class="material-symbols-outlined text-lg">send</span>
-                    </button>
-                    <div id="form-status" class="hidden mt-4 p-3 rounded text-center text-sm font-semibold"></div>
-                </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-surface-container-lowest border-t border-outline-variant py-8">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-4 px-gutter max-w-container-max mx-auto text-xs font-code-block text-on-surface-variant">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center gap-4 px-gutter max-w-container-max mx-auto text-xs font-code-block text-on-surface-variant">
             <div class="font-bold text-primary">
                 JÔNATAS CAÇULA SOARES © 2026
             </div>
@@ -565,9 +713,11 @@
                 Desenvolvedor Backend · TypeScript | NestJS | Elysia.js | Java
             </div>
             <div class="flex gap-4">
-                <a class="hover:text-primary transition-colors" href="https://github.com/SchweetzzZ" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="hover:text-primary transition-colors" href="https://github.com/SchweetzzZ" target="_blank"
+                    rel="noopener noreferrer">GitHub</a>
                 <a class="hover:text-primary transition-colors" href="mailto:jonatas_kp32@hotmail.com">Email</a>
-                <a class="hover:text-primary transition-colors" href="https://wa.me/5574988151254" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a class="hover:text-primary transition-colors" href="https://wa.me/5574988151254" target="_blank"
+                    rel="noopener noreferrer">WhatsApp</a>
             </div>
         </div>
     </footer>
@@ -584,7 +734,7 @@
                 tsTab.classList.remove('text-on-surface-variant');
                 javaTab.classList.remove('active-tab');
                 javaTab.classList.add('text-on-surface-variant');
-                
+
                 projects.forEach(p => {
                     if (p.classList.contains('ts-project')) {
                         p.classList.remove('hidden');
@@ -661,4 +811,5 @@
         }
     </script>
 </body>
+
 </html>
