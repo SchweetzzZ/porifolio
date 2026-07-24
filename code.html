@@ -3,550 +3,461 @@
 <html class="dark" lang="pt-BR"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>DevPortfolio | Backend Developer</title>
+<title>SYS.DEV | Senior Backend Portfolio</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Geist:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Geist:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#009ada",
+                    "on-primary-fixed-variant": "#004395",
+                    "surface-variant": "#32353c",
+                    "surface-container-high": "#272a31",
+                    "surface-tint": "#adc6ff",
+                    "on-secondary-fixed": "#0b1c30",
+                    "surface-container-low": "#191b23",
+                    "on-error": "#690005",
+                    "primary-container": "#4d8eff",
+                    "inverse-surface": "#e1e2ec",
+                    "surface-bright": "#363941",
+                    "on-error-container": "#ffdad6",
+                    "secondary-container": "#3a4a5f",
+                    "tertiary": "#89ceff",
+                    "on-secondary-fixed-variant": "#38485d",
+                    "on-surface-variant": "#c2c6d6",
+                    "on-background": "#e1e2ec",
+                    "error": "#ffb4ab",
+                    "tertiary-fixed": "#c9e6ff",
+                    "on-primary": "#002e6a",
+                    "surface": "#10131a",
+                    "primary": "#adc6ff",
+                    "surface-dim": "#10131a",
+                    "primary-fixed-dim": "#adc6ff",
+                    "on-surface": "#e1e2ec",
+                    "error-container": "#93000a",
+                    "inverse-on-surface": "#2e3038",
+                    "on-secondary": "#213145",
+                    "secondary": "#b7c8e1",
+                    "secondary-fixed-dim": "#b7c8e1",
+                    "on-primary-container": "#00285d",
+                    "tertiary-fixed-dim": "#89ceff",
+                    "inverse-primary": "#005ac2",
+                    "surface-container-lowest": "#0b0e15",
+                    "outline-variant": "#424754",
+                    "background": "#10131a",
+                    "on-secondary-container": "#a9bad3",
+                    "on-tertiary-container": "#002d43",
+                    "surface-container": "#1d2027",
+                    "on-tertiary-fixed-variant": "#004c6e",
+                    "on-primary-fixed": "#001a42",
+                    "secondary-fixed": "#d3e4fe",
+                    "surface-container-highest": "#32353c",
+                    "on-tertiary-fixed": "#001e2f",
+                    "outline": "#8c909f",
+                    "on-tertiary": "#00344d",
+                    "primary-fixed": "#d8e2ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "section-padding-mobile": "64px",
+                    "container-max": "1120px",
+                    "unit": "8px",
+                    "section-padding-desktop": "120px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "code-block": ["JetBrains Mono"],
+                    "body-lg": ["Geist"],
+                    "headline-md": ["Geist"],
+                    "display-lg-mobile": ["Geist"],
+                    "label-sm": ["JetBrains Mono"],
+                    "display-lg": ["Geist"],
+                    "body-md": ["Geist"]
+            },
+            "fontSize": {
+                    "code-block": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["13px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+        .lift-glow {
+            transition: all 150ms ease-in-out;
+        }
+        .lift-glow:hover {
+            transform: translateY(-4px);
+            border-color: #adc6ff;
+            box-shadow: 0 0 20px rgba(173, 198, 255, 0.05);
+        }
+        .active-tab {
+            color: #adc6ff;
+            border-bottom: 2px solid #adc6ff;
+        }
+        .timeline-line {
+            background-image: linear-gradient(to bottom, #334155 50%, transparent 50%);
+            background-size: 1px 8px;
+        }
         body {
             background-color: #10131a;
             color: #e1e2ec;
-            scroll-behavior: smooth;
-        }
-        .glass-card {
-            background: rgba(29, 32, 39, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(66, 71, 84, 0.3);
-            transition: all 0.3s ease;
-        }
-        .glass-card:hover {
-            border-color: rgba(59, 130, 246, 0.5);
-            transform: translateY(-4px);
-        }
-        .terminal-window {
-            background: #0b0e15;
-            border: 1px solid #1F2937;
-            border-radius: 0.75rem;
-            overflow: hidden;
-        }
-        .terminal-header {
-            background: #191b23;
-            padding: 8px 16px;
-            display: flex;
-            gap: 6px;
-            border-bottom: 1px solid #1F2937;
-        }
-        .dot { width: 12px; height: 12px; border-radius: 50%; }
-        .dot-red { background: #ff5f56; }
-        .dot-yellow { background: #ffbd2e; }
-        .dot-green { background: #27c93f; }
-        
-        .pulse {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: .5; }
         }
     </style>
-<script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "on-surface": "#e1e2ec",
-                      "inverse-surface": "#e1e2ec",
-                      "on-tertiary": "#502400",
-                      "on-background": "#e1e2ec",
-                      "primary-fixed-dim": "#adc6ff",
-                      "tertiary-fixed-dim": "#ffb786",
-                      "surface-tint": "#adc6ff",
-                      "on-primary-container": "#00285d",
-                      "error-container": "#93000a",
-                      "surface-container-lowest": "#0b0e15",
-                      "primary-container": "#4d8eff",
-                      "on-tertiary-fixed": "#311400",
-                      "secondary": "#b1c6f9",
-                      "outline-variant": "#424754",
-                      "surface-container-highest": "#32353c",
-                      "surface-container-high": "#272a31",
-                      "surface-container": "#1d2027",
-                      "on-tertiary-container": "#461f00",
-                      "surface-container-low": "#191b23",
-                      "surface-dim": "#10131a",
-                      "secondary-fixed": "#d8e2ff",
-                      "surface-bright": "#363941",
-                      "primary-fixed": "#d8e2ff",
-                      "on-tertiary-fixed-variant": "#723600",
-                      "surface": "#10131a",
-                      "surface-variant": "#32353c",
-                      "on-primary-fixed": "#001a42",
-                      "on-secondary-fixed-variant": "#304671",
-                      "secondary-container": "#304671",
-                      "error": "#ffb4ab",
-                      "on-secondary": "#182f59",
-                      "on-primary-fixed-variant": "#004395",
-                      "tertiary": "#ffb786",
-                      "on-secondary-fixed": "#001a42",
-                      "inverse-primary": "#005ac2",
-                      "background": "#10131a",
-                      "on-secondary-container": "#9fb5e7",
-                      "inverse-on-surface": "#2e3038",
-                      "tertiary-container": "#df7412",
-                      "on-surface-variant": "#c2c6d6",
-                      "tertiary-fixed": "#ffdcc6",
-                      "on-error-container": "#ffdad6",
-                      "on-error": "#690005",
-                      "primary": "#adc6ff",
-                      "secondary-fixed-dim": "#b1c6f9",
-                      "on-primary": "#002e6a",
-                      "outline": "#8c909f"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.25rem",
-                      "lg": "0.5rem",
-                      "xl": "0.75rem",
-                      "full": "9999px"
-              },
-              "spacing": {
-                      "container-max": "1200px",
-                      "margin-mobile": "16px",
-                      "section-padding": "120px",
-                      "stack-md": "24px",
-                      "stack-sm": "8px",
-                      "gutter": "24px",
-                      "stack-lg": "64px"
-              },
-              "fontFamily": {
-                      "display": ["Inter"],
-                      "code-sm": ["Geist"],
-                      "headline-lg": ["Inter"],
-                      "label-caps": ["Geist"],
-                      "headline-lg-mobile": ["Inter"],
-                      "body-md": ["Inter"]
-              },
-              "fontSize": {
-                      "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                      "code-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
-                      "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                      "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
-              }
-            },
-          },
-        }
-    </script>
 </head>
-<body class="font-body-md text-on-surface bg-background">
+<body class="font-body-md text-body-md overflow-x-hidden">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30">
-<div class="flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20">
-<div class="font-display text-headline-lg-mobile md:text-headline-lg font-bold text-primary">DevPortfolio</div>
+<header class="fixed top-0 w-full z-50 bg-background border-b border-outline-variant">
+<nav class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold tracking-tighter text-on-background">
+                SYS.DEV
+            </div>
 <div class="hidden md:flex gap-8 items-center">
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#about">About</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#skills">Skills</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#projects">Projects</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#experience">Experience</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#contact">Contact</a>
-<a class="bg-primary text-on-primary px-6 py-2 rounded-full font-bold hover:opacity-90 transition-all" href="#">Resume</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-150" href="#projects">Projects</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-150" href="#experience">Experience</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-150" href="#contact">Contact</a>
+<button class="bg-primary text-on-primary px-6 py-2 rounded font-bold transition-all duration-150 ease-in-out hover:opacity-90">Resume</button>
 </div>
-<button class="md:hidden text-primary">
+<button class="md:hidden text-on-background">
 <span class="material-symbols-outlined">menu</span>
 </button>
-</div>
 </nav>
-<main class="pt-20">
-<!-- Hero Section -->
-<section class="min-h-[819px] flex flex-col justify-center px-margin-mobile md:px-gutter max-w-container-max mx-auto py-section-padding">
-<div class="grid md:grid-cols-2 gap-stack-lg items-center">
-<div class="space-y-stack-md">
-<div class="flex items-center gap-2 text-primary">
-<span class="w-3 h-3 bg-primary rounded-full pulse"></span>
-<span class="font-label-caps text-label-caps uppercase tracking-wider">Available for new opportunities</span>
-</div>
-<h1 class="font-display text-[56px] md:text-[80px] leading-none font-extrabold tracking-tight">
-                        Gustavo <span class="text-primary">Mendes</span>
+</header>
+<!-- Expanded Hero Section -->
+<section class="relative min-h-screen flex flex-col justify-center pt-24 pb-20">
+<div class="relative z-10 max-w-container-max mx-auto px-gutter w-full">
+<!-- Main Headline and Intro -->
+<div class="max-w-3xl mb-16">
+<p class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-4">Senior Backend Developer</p>
+<h1 class="font-display-lg text-display-lg md:text-display-lg mb-6 leading-tight">
+                    Arquitetando Sistemas <br/>
+<span class="text-primary-container">Escaláveis e Robustos.</span>
 </h1>
-<p class="font-headline-lg text-headline-lg text-on-surface-variant">Backend Developer</p>
-<p class="max-w-xl text-on-surface-variant leading-relaxed">
-                        Desenvolvedor Backend com experiência em Node.js, TypeScript e NestJS, construindo APIs escaláveis e estudando Java e Spring Boot. Focado em arquitetura limpa e alta performance.
-                    </p>
-<div class="flex flex-wrap gap-4 pt-4">
-<a class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:translate-y-[-2px] transition-all" href="#projects">
-                            Ver Projetos
-                            <span class="material-symbols-outlined">arrow_forward</span>
-</a>
-<div class="flex gap-2">
-<a class="p-4 rounded-xl border border-outline-variant hover:bg-surface-container transition-colors group" href="#">
-<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">code</span>
-</a>
-<a class="p-4 rounded-xl border border-outline-variant hover:bg-surface-container transition-colors group" href="#">
-<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">group</span>
-</a>
-</div>
-</div>
-</div>
-<div class="relative">
-<div class="absolute -inset-4 bg-primary/10 blur-3xl rounded-full"></div>
-<div class="terminal-window relative aspect-square md:aspect-video flex flex-col">
-<div class="terminal-header">
-<div class="dot dot-red"></div>
-<div class="dot dot-yellow"></div>
-<div class="dot dot-green"></div>
-</div>
-<div class="p-6 font-code-sm text-code-sm text-primary flex-1 overflow-hidden">
-<div class="mb-4 text-on-surface-variant">$ whoami</div>
-<div class="text-on-surface mb-2">> Gustavo Mendes, 21 years old.</div>
-<div class="text-on-surface mb-4">> Backend Engineer specializing in scalable distributed systems.</div>
-<div class="mb-4 text-on-surface-variant">$ ls current-stack/</div>
-<div class="grid grid-cols-2 gap-2 text-on-surface">
-<div>- nodejs/nestjs</div>
-<div>- typescript</div>
-<div>- java/springboot</div>
-<div>- postgresql</div>
-<div>- docker/k8s</div>
-<div>- rabbitmq/kafka</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- About Section -->
-<section class="bg-surface-container-low py-section-padding" id="about">
-<div class="px-margin-mobile md:px-gutter max-w-[720px] mx-auto text-center">
-<h2 class="font-display text-headline-lg-mobile md:text-headline-lg mb-stack-md">Engineering Architecture & Scalability</h2>
-<p class="text-on-surface-variant text-body-md leading-relaxed mb-stack-lg">
-                    Minha paixão está na construção de sistemas robustos que resolvem problemas complexos. Especializado em microserviços e design orientado a domínios (DDD), busco sempre aplicar as melhores práticas de engenharia de software para garantir código limpo, testável e manutenível.
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                    Especialista em microsserviços e sistemas de alta disponibilidade. Focado em transformar desafios técnicos complexos em infraestruturas performáticas.
                 </p>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter text-left">
-<div class="space-y-2">
-<span class="material-symbols-outlined text-primary text-3xl">architecture</span>
-<h3 class="font-bold">Microservices</h3>
-<p class="text-sm text-on-surface-variant">Design and orchestration of distributed backend ecosystems.</p>
-</div>
-<div class="space-y-2">
-<span class="material-symbols-outlined text-primary text-3xl">speed</span>
-<h3 class="font-bold">Optimization</h3>
-<p class="text-sm text-on-surface-variant">Performance tuning and efficient database querying patterns.</p>
-</div>
-<div class="space-y-2">
-<span class="material-symbols-outlined text-primary text-3xl">security</span>
-<h3 class="font-bold">Best Practices</h3>
-<p class="text-sm text-on-surface-variant">Clean code principles, TDD, and SOLID implementation.</p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-primary text-on-primary px-8 py-3 rounded font-bold hover:opacity-90 transition-all" href="#projects">Projetos</a>
+<a class="border border-outline text-on-surface px-8 py-3 rounded font-bold hover:bg-surface-container transition-all flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]">code</span> GitHub
+                    </a>
+<a class="border border-outline text-on-surface px-8 py-3 rounded font-bold hover:bg-surface-container transition-all flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]">link</span> LinkedIn
+                    </a>
 </div>
 </div>
-</div>
-</section>
-<!-- Skills Grid -->
-<section class="py-section-padding px-margin-mobile md:px-gutter max-w-container-max mx-auto" id="skills">
-<div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg gap-4">
-<div>
-<span class="text-primary font-label-caps text-label-caps tracking-widest uppercase mb-2 block">Technical Stack</span>
-<h2 class="font-display text-[32px] md:text-[40px] font-bold">Skills & Tools</h2>
-</div>
-<p class="max-w-md text-on-surface-variant">Professional toolkit focused on backend reliability and modern cloud infrastructure.</p>
-</div>
-<div class="grid md:grid-cols-3 gap-6">
-<!-- Backend -->
-<div class="glass-card p-8 rounded-2xl">
-<div class="flex items-center gap-3 mb-6">
-<div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center text-primary">
-<span class="material-symbols-outlined">settings_ethernet</span>
-</div>
-<h3 class="font-display text-xl font-bold">Backend</h3>
-</div>
-<div class="flex flex-wrap gap-2">
-<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-code-sm border border-outline-variant">Node.js</span>
-<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-code-sm border border-outline-variant">TypeScript</span>
-<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-code-sm border border-outline-variant">NestJS</span>
-<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-code-sm border border-outline-variant text-primary">Java</span>
-<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-code-sm border border-outline-variant text-primary">Spring Boot</span>
+<!-- Integrated About & Experience Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-20 border-t border-outline-variant pt-16" id="experience">
+<!-- Left Column: About Me -->
+<div class="md:col-span-5">
+<h2 class="font-headline-md text-headline-md mb-6 flex items-center gap-3">
+<span class="w-8 h-[2px] bg-primary"></span> Sobre mim
+                    </h2>
+<div class="space-y-6 text-on-surface-variant font-body-md text-body-md">
+<p>Com mais de 8 anos de experiência em desenvolvimento de sistemas, meu foco é a construção de soluções backend que não apenas funcionam, mas performam sob pressão.</p>
+<p>Acredito em código limpo, arquitetura desacoplada e processos de CI/CD automatizados. Atualmente, lidero iniciativas técnicas focadas em nuvem e segurança de dados.</p>
+<p>Quando não estou codando, estou estudando novos padrões de concorrência ou contribuindo para projetos open-source no ecossistema Node.</p>
 </div>
 </div>
-<!-- Database -->
-<div class="glass-card p-8 rounded-2xl">
-<div class="flex items-center gap-3 mb-6">
-<div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center text-primary">
-<span class="material-symbols-outlined">database</span>
+<!-- Right Column: Experience Timeline -->
+<div class="md:col-span-7">
+<h2 class="font-headline-md text-headline-md mb-6 flex items-center gap-3">
+<span class="w-8 h-[2px] bg-primary"></span> Experiência Profissional
+                    </h2>
+<div class="space-y-0 relative">
+<div class="absolute left-1 top-2 bottom-2 w-[1px] timeline-line"></div>
+<div class="relative pl-10 pb-10">
+<div class="absolute left-0 top-2 w-2 h-2 bg-primary rounded-full"></div>
+<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-1">
+<h4 class="font-headline-md text-[18px] font-bold">Senior Software Engineer</h4>
+<span class="font-label-sm text-[12px] text-secondary bg-secondary-container/20 px-2 py-0.5 rounded">2021 — Presente</span>
 </div>
-<h3 class="font-display text-xl font-bold">Persistence</h3>
+<p class="text-on-surface text-sm font-semibold mb-1">Tech Solutions Inc.</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">Liderança técnica na migração de monolito para microsserviços, impactando mais de 1M de usuários ativos.</p>
 </div>
-<div class="flex flex-wrap gap-2">
-<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-code-sm border border-outline-variant">PostgreSQL</span>
-<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-code-sm border border-outline-variant">MongoDB</span>
-<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-code-sm border border-outline-variant">Redis</span>
-<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-code-sm border border-outline-variant">Elasticsearch</span>
+<div class="relative pl-10 pb-10">
+<div class="absolute left-0 top-2 w-2 h-2 bg-outline rounded-full"></div>
+<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-1">
+<h4 class="font-headline-md text-[18px] font-bold">Backend Developer</h4>
+<span class="font-label-sm text-[12px] text-on-surface-variant px-2 py-0.5 rounded">2018 — 2021</span>
+</div>
+<p class="text-on-surface text-sm font-semibold mb-1">Global Digital Agency</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">Desenvolvimento de APIs robustas para o setor de e-commerce utilizando Java Spring Boot e PostgreSQL.</p>
+</div>
+<div class="relative pl-10">
+<div class="absolute left-0 top-2 w-2 h-2 bg-outline rounded-full"></div>
+<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-1">
+<h4 class="font-headline-md text-[18px] font-bold">Software Intern</h4>
+<span class="font-label-sm text-[12px] text-on-surface-variant px-2 py-0.5 rounded">2016 — 2018</span>
+</div>
+<p class="text-on-surface text-sm font-semibold mb-1">Innovate Dev Studio</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">Início da jornada técnica focada em manutenção de sistemas legados e refatoração de código.</p>
 </div>
 </div>
-<!-- Tools -->
-<div class="glass-card p-8 rounded-2xl">
-<div class="flex items-center gap-3 mb-6">
-<div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center text-primary">
-<span class="material-symbols-outlined">developer_board</span>
-</div>
-<h3 class="font-display text-xl font-bold">DevOps & Cloud</h3>
-</div>
-<div class="flex flex-wrap gap-2">
-<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-code-sm border border-outline-variant">Docker</span>
-<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-code-sm border border-outline-variant">Kubernetes</span>
-<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-code-sm border border-outline-variant">Kafka</span>
-<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-code-sm border border-outline-variant">AWS S3/EC2</span>
-<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-code-sm border border-outline-variant">Git</span>
 </div>
 </div>
 </div>
 </section>
 <!-- Projects Section -->
-<section class="bg-surface py-section-padding" id="projects">
-<div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto">
-<div class="text-center mb-stack-lg">
-<h2 class="font-display text-headline-lg font-bold mb-4">Featured Work</h2>
-<div class="inline-flex p-1 bg-surface-container-low rounded-xl border border-outline-variant/30" id="project-tabs">
-<button class="tab-btn active px-6 py-2 rounded-lg text-sm font-bold transition-all bg-primary text-on-primary" data-tab="ts" onclick="switchTab('ts')">TypeScript / Node.js</button>
-<button class="tab-btn px-6 py-2 rounded-lg text-sm font-bold transition-all text-on-surface-variant hover:text-primary" data-tab="java" onclick="switchTab('java')">Java / Spring Boot</button>
+<section class="py-[120px] bg-surface-container-lowest" id="projects">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-4">Projetos Selecionados</h2>
+<p class="text-on-surface-variant max-w-lg">Uma amostra do meu trabalho em engenharia de software e design de arquitetura.</p>
+</div>
+<!-- Tabbed Navigation -->
+<div class="flex gap-8 border-b border-outline-variant w-full md:w-auto">
+<button class="font-label-sm text-label-sm pb-4 active-tab uppercase tracking-widest transition-all" id="tab-ts" onclick="switchTab('ts')">TypeScript / Node.js</button>
+<button class="font-label-sm text-label-sm pb-4 text-on-surface-variant uppercase tracking-widest hover:text-primary transition-all" id="tab-java" onclick="switchTab('java')">Java / Spring Boot</button>
 </div>
 </div>
-<!-- Projects Grid -->
-<div class="grid md:grid-cols-2 gap-8" id="project-container">
-<!-- TS Project -->
-<div class="project-item ts-project flex flex-col">
-<div class="relative rounded-2xl overflow-hidden mb-6 aspect-video group">
-<div class="absolute inset-0 bg-surface-container-highest animate-pulse"></div>
-<img class="relative w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional screenshot of a modern web application dashboard with sleek dark mode UI, featuring data visualization charts and complex navigation elements. The aesthetic is clean, technical, and utilizes a blue and dark gray color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkOxPPfP5MrsSjQx58KNWtpvhyabRUAgc_6Q_jQ1Z_1B8HRQQ87Ks6Qqq3vvjBtdwXsSsw7wGp9DMXwUumK2hSStO9Q4h5fMK34iL03jsr_N7Cy3HDXuJbuAl4t6UzbsKl_BIhM7yS_6fQDtTGi9p-q_0b9fNps1q7nxW4_qpedLu463TBew3OKCrSFpqvcQSLygQ_FPIsZKqj7TTZ7lac0VFHiq4SIfVUAsD6vhCZe8ZGF4Ve6bqgE95L9zz-J3i9tsCxk8_Fp8k"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-<div class="flex gap-4">
-<a class="bg-primary text-on-primary p-2 rounded-full" href="#"><span class="material-symbols-outlined">link</span></a>
-<a class="bg-surface text-on-surface p-2 rounded-full" href="#"><span class="material-symbols-outlined">terminal</span></a>
+<!-- Project Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="project-container">
+<!-- TS Project 1 -->
+<div class="project-item ts-project group flex flex-col bg-surface-container rounded-xl border border-outline-variant lift-glow overflow-hidden">
+<div class="h-64 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A clean dark-themed dashboard interface with data visualization graphs and server status indicators." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC_QT085T7iouGsCMpuHS3WiVk0CDiEL8B1FunfaOCLRHG0SjAsNj1reh0FmdsW1DqPWJDOUP68dV6G8KQSiv5wkWyi3my8rvduaFpYjt4m7meT2otipJx8FEJn-OPnkW7bBINq9SxYcrvVamOMtIGYyUFaBWiR6kKnbrlcFdhSWt9KUjwQxPU9lyNXn6wRdejYs2H9kPWbX_4WiIdclfpVq38EowVwPTxSGLPYmZtSrQx8hVTTAfrb4Cye6MhQq0NtzygZUUVZTdU')"></div>
 </div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md">Nexus API Gateway</h3>
+<span class="font-label-sm text-label-sm px-3 py-1 bg-primary-container text-on-primary-container rounded-full">Node.js</span>
 </div>
+<p class="text-on-surface-variant mb-6">Gateway de API de alto desempenho com rate-limiting dinâmico e autenticação JWT centralizada.</p>
+<div class="mb-6">
+<h4 class="font-label-sm text-label-sm text-secondary mb-2 uppercase">Desafio Técnico:</h4>
+<p class="text-on-surface-variant text-sm italic">Redução de latência em 40% através de caching agressivo com Redis e otimização de payloads JSON.</p>
 </div>
-<div class="space-y-3">
-<div class="flex justify-between items-center">
-<h3 class="font-display text-xl font-bold">Enterprise API Gateway</h3>
-<span class="font-code-sm text-xs text-primary">NestJS</span>
-</div>
-<p class="text-on-surface-variant text-sm line-clamp-2">High-performance gateway supporting multiple authentication providers and real-time request throttling.</p>
-<div class="flex flex-wrap gap-2 pb-4 border-b border-outline-variant/30">
-<span class="px-2 py-0.5 bg-surface-container rounded text-[10px] font-code-sm">Redis</span>
-<span class="px-2 py-0.5 bg-surface-container rounded text-[10px] font-code-sm">Docker</span>
-<span class="px-2 py-0.5 bg-surface-container rounded text-[10px] font-code-sm">Passport.js</span>
-</div>
-<p class="text-xs italic text-on-surface-variant">Challenge: Managing horizontal scaling during traffic spikes.</p>
-</div>
-</div>
-<!-- Java Project (Hidden by default) -->
-<div class="project-item java-project hidden flex flex-col">
-<div class="relative rounded-2xl overflow-hidden mb-6 aspect-video group">
-<div class="absolute inset-0 bg-surface-container-highest animate-pulse"></div>
-<img class="relative w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sophisticated architectural diagram showing microservices communication, highlighted with blue glowing paths on a dark slate background. The image evokes a sense of deep backend complexity and high-performance server-side engineering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5HFmJ_63KvVLfsqILp3pR1LNQkzequtBkADSIHmfO5FOKjuQIC72ldFBQ3vaVCYaoyxAlP5xI-8oS_ZUARQI6Lq7dQ7G1ETBhwS4gcEcEypkOicqOceFUXGBVwAlFSiDmbe7sWzu3K-45XhF227890m7WJq6cl3e1rBNUayoCb3na2d4gfQFpvMj4Gc762O9wLdgqefgRfhFlnWnj-pUV1nqVvahyuiMxCFDUllE9WjStopjbCSRXaFsgEce4m5i0VovbT3fXMWU"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-<div class="flex gap-4">
-<a class="bg-primary text-on-primary p-2 rounded-full" href="#"><span class="material-symbols-outlined">link</span></a>
-<a class="bg-surface text-on-surface p-2 rounded-full" href="#"><span class="material-symbols-outlined">terminal</span></a>
+<div class="mt-auto flex gap-4 pt-6 border-t border-outline-variant">
+<button class="flex items-center gap-2 text-primary font-bold hover:underline">
+<span class="material-symbols-outlined">terminal</span> Repositório
+                            </button>
+<button class="flex items-center gap-2 text-on-surface-variant font-bold hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined">visibility</span> Demo
+                            </button>
 </div>
 </div>
 </div>
-<div class="space-y-3">
-<div class="flex justify-between items-center">
-<h3 class="font-display text-xl font-bold">Banking Microservice</h3>
-<span class="font-code-sm text-xs text-primary">Spring Boot</span>
+<!-- TS Project 2 -->
+<div class="project-item ts-project group flex flex-col bg-surface-container rounded-xl border border-outline-variant lift-glow overflow-hidden">
+<div class="h-64 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist abstract digital art showing interconnected nodes." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdaT_CN7bfyOXC7a64jRkeeX6-GhL7CBov9gdXPqzuhUA5EYr1xX0HDrfT0Xeowi6HOuWPwh6vW2QrkQjpZusq1cGqzz3vuKuWOUOrMqaLKMQgJZYxBtKWvIn4ZTI_AoYa_WL5lqrfScaQW0LXO56ogahnDCkvrkOZsfDMqrJ_I-hn7GXpZ5jvmaci5yKhPoENUSAW3ZoA7rK2V7pKMl3A3BrUfBnRflA0Ac9z-6RJ3q211Q4ZYbYsStyNKs62jLqi8aSrB7K8rYU')"></div>
 </div>
-<p class="text-on-surface-variant text-sm line-clamp-2">Transactional microservice system ensuring ACID compliance across distributed databases.</p>
-<div class="flex flex-wrap gap-2 pb-4 border-b border-outline-variant/30">
-<span class="px-2 py-0.5 bg-surface-container rounded text-[10px] font-code-sm">PostgreSQL</span>
-<span class="px-2 py-0.5 bg-surface-container rounded text-[10px] font-code-sm">Kafka</span>
-<span class="px-2 py-0.5 bg-surface-container rounded text-[10px] font-code-sm">JUnit 5</span>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md">StreamSync Engine</h3>
+<span class="font-label-sm text-label-sm px-3 py-1 bg-primary-container text-on-primary-container rounded-full">TypeScript</span>
 </div>
-<p class="text-xs italic text-on-surface-variant">Challenge: Implementing eventual consistency across 3 distinct services.</p>
+<p class="text-on-surface-variant mb-6">Processamento de eventos em tempo real utilizando Kafka e WebSockets para sincronização de estados globais.</p>
+<div class="mb-6">
+<h4 class="font-label-sm text-label-sm text-secondary mb-2 uppercase">Desafio Técnico:</h4>
+<p class="text-on-surface-variant text-sm italic">Garantia de entrega 'exactly-once' em cenários de alta concorrência e falhas parciais de rede.</p>
 </div>
-</div>
-<!-- Additional project placeholders would follow same pattern -->
-</div>
-</div>
-</section>
-<!-- Experience Timeline -->
-<section class="py-section-padding bg-surface-container-low" id="experience">
-<div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto">
-<div class="max-w-[800px] mx-auto">
-<h2 class="font-display text-headline-lg font-bold mb-stack-lg text-center">Career Journey</h2>
-<div class="relative border-l-2 border-outline-variant ml-4 md:ml-0 space-y-stack-lg">
-<!-- Experience 1 -->
-<div class="relative pl-10">
-<div class="absolute left-[-9px] top-1 w-4 h-4 rounded-full bg-primary ring-4 ring-background"></div>
-<div class="mb-1 flex flex-col md:flex-row md:items-center justify-between">
-<h3 class="text-xl font-bold text-on-surface">Backend Software Engineer</h3>
-<span class="text-primary font-code-sm text-sm">Jan 2023 — Present</span>
-</div>
-<p class="text-on-surface-variant font-bold mb-4">TechSolutions Inc.</p>
-<ul class="space-y-2 text-on-surface-variant list-disc pl-4 mb-4">
-<li>Architected and implemented NestJS microservices for a large-scale e-commerce platform.</li>
-<li>Optimized database queries in PostgreSQL, reducing API response times by 40%.</li>
-<li>Integrated Kafka for asynchronous event-driven communication between services.</li>
-</ul>
-<div class="flex flex-wrap gap-2">
-<span class="text-[10px] uppercase font-bold text-primary">NestJS</span>
-<span class="text-[10px] uppercase font-bold text-primary">PostgreSQL</span>
-<span class="text-[10px] uppercase font-bold text-primary">Kafka</span>
-<span class="text-[10px] uppercase font-bold text-primary">AWS</span>
+<div class="mt-auto flex gap-4 pt-6 border-t border-outline-variant">
+<button class="flex items-center gap-2 text-primary font-bold hover:underline">
+<span class="material-symbols-outlined">terminal</span> Repositório
+                            </button>
+<button class="flex items-center gap-2 text-on-surface-variant font-bold hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined">visibility</span> Demo
+                            </button>
 </div>
 </div>
-<!-- Experience 2 -->
-<div class="relative pl-10">
-<div class="absolute left-[-9px] top-1 w-4 h-4 rounded-full bg-outline-variant ring-4 ring-background"></div>
-<div class="mb-1 flex flex-col md:flex-row md:items-center justify-between">
-<h3 class="text-xl font-bold text-on-surface">Junior Backend Developer</h3>
-<span class="text-on-surface-variant font-code-sm text-sm">June 2021 — Dec 2022</span>
 </div>
-<p class="text-on-surface-variant font-bold mb-4">Digital Flow Studio</p>
-<ul class="space-y-2 text-on-surface-variant list-disc pl-4 mb-4">
-<li>Developed RESTful APIs using Node.js and Express.</li>
-<li>Maintained legacy systems and migrated services to TypeScript.</li>
-<li>Collaborated with frontend teams to define API contracts using Swagger.</li>
-</ul>
-<div class="flex flex-wrap gap-2">
-<span class="text-[10px] uppercase font-bold text-on-surface-variant">Node.js</span>
-<span class="text-[10px] uppercase font-bold text-on-surface-variant">TypeScript</span>
-<span class="text-[10px] uppercase font-bold text-on-surface-variant">MongoDB</span>
+<!-- Java Projects (Hidden initially) -->
+<div class="project-item java-project hidden group flex flex-col bg-surface-container rounded-xl border border-outline-variant lift-glow overflow-hidden">
+<div class="h-64 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Close-up of clean, organized code displayed on a monitor." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBo0HQOHjKajmF3u-YSNgxjyPgYYFS2B3CN-MDFczjshJyDnNI8ifrIia3zwBKWxk6UZuj-PB7q-Xw0rb_M1IVCxgAL36DujxuvsXvThMH27gVPfzF2ZOlPrkGyZ12ebCJpGiwwjzcP-6nbARKmyoDhJCG2KuKgAeKyBlMG-pW-wJSrepbM7e04f5Xu6Vx6jKaP7Dp1LHoeGsSNpxzb76fMI5w3YZnj0VzK2wZIznF5MFOpJfcth2HiJ4nhBVThakS6DHfkQ42QXXY')"></div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md">Core Finance Ledger</h3>
+<span class="font-label-sm text-label-sm px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full">Spring Boot</span>
+</div>
+<p class="text-on-surface-variant mb-6">Motor transacional para processamento financeiro com suporte a multi-moeda e reconciliação automática.</p>
+<div class="mb-6">
+<h4 class="font-label-sm text-label-sm text-secondary mb-2 uppercase">Desafio Técnico:</h4>
+<p class="text-on-surface-variant text-sm italic">Implementação de isolamento ACID rigoroso em banco de dados distribuído para 10k transações por segundo.</p>
+</div>
+<div class="mt-auto flex gap-4 pt-6 border-t border-outline-variant">
+<button class="flex items-center gap-2 text-primary font-bold hover:underline">
+<span class="material-symbols-outlined">terminal</span> Repositório
+                            </button>
 </div>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- Education -->
-<section class="py-section-padding px-margin-mobile md:px-gutter max-w-container-max mx-auto">
-<h2 class="font-display text-headline-lg font-bold mb-stack-lg">Education</h2>
-<div class="grid md:grid-cols-2 gap-gutter">
-<div class="glass-card p-8 rounded-2xl flex items-start gap-6">
-<span class="material-symbols-outlined text-primary text-4xl">school</span>
-<div>
-<h3 class="font-bold text-lg mb-1">Bachelor of Computer Science</h3>
-<p class="text-on-surface-variant text-sm mb-2">Universidade Estadual Paulista (UNESP)</p>
-<p class="text-primary font-code-sm text-xs">Expected Completion: 2025</p>
+<!-- Technologies Section -->
+<section class="py-24 bg-background">
+<div class="max-w-container-max mx-auto px-gutter text-center">
+<h2 class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em] mb-12">Stack Tecnológica</h2>
+<div class="flex flex-wrap justify-center gap-10 opacity-60 hover:opacity-100 transition-opacity duration-300">
+<div class="flex flex-col items-center gap-3">
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container border border-outline-variant rounded hover:border-primary transition-colors group">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary">developer_board</span>
 </div>
+<span class="font-label-sm text-label-sm">Node.js</span>
 </div>
-<div class="glass-card p-8 rounded-2xl flex items-start gap-6">
-<span class="material-symbols-outlined text-primary text-4xl">verified</span>
-<div>
-<h3 class="font-bold text-lg mb-1">Java & Spring Boot Specialist</h3>
-<p class="text-on-surface-variant text-sm mb-2">Alura / Oracle One Program</p>
-<p class="text-primary font-code-sm text-xs">Completed 2023</p>
+<div class="flex flex-col items-center gap-3">
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container border border-outline-variant rounded hover:border-primary transition-colors group">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary">terminal</span>
+</div>
+<span class="font-label-sm text-label-sm">TypeScript</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container border border-outline-variant rounded hover:border-primary transition-colors group">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary">coffee</span>
+</div>
+<span class="font-label-sm text-label-sm">Spring Boot</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container border border-outline-variant rounded hover:border-primary transition-colors group">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary">database</span>
+</div>
+<span class="font-label-sm text-label-sm">PostgreSQL</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container border border-outline-variant rounded hover:border-primary transition-colors group">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary">cloud</span>
+</div>
+<span class="font-label-sm text-label-sm">Docker/K8s</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container border border-outline-variant rounded hover:border-primary transition-colors group">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary">hub</span>
+</div>
+<span class="font-label-sm text-label-sm">AWS</span>
 </div>
 </div>
 </div>
 </section>
 <!-- Contact Section -->
-<section class="py-section-padding bg-surface-container-high relative overflow-hidden" id="contact">
-<div class="absolute top-0 right-0 w-1/3 h-full bg-primary/5 blur-[120px] rounded-full -mr-20"></div>
-<div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto relative z-10">
-<div class="grid md:grid-cols-2 gap-stack-lg">
+<section class="py-[120px] bg-background" id="contact">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
 <div>
-<h2 class="font-display text-headline-lg font-bold mb-stack-md">Let's build something <br/>reliable together.</h2>
-<p class="text-on-surface-variant mb-stack-lg max-w-md">Estou sempre aberto a novos desafios e discussões técnicas. Se você tem um projeto ou apenas quer bater um papo sobre backend, entre em contato!</p>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6">Vamos Conversar?</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg mb-10">Estou sempre aberto a discutir novos projetos, arquiteturas complexas ou oportunidades de mentoria.</p>
 <div class="space-y-6">
 <div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-primary">
-<span class="material-symbols-outlined">mail</span>
+<div class="w-10 h-10 flex items-center justify-center bg-surface-container rounded">
+<span class="material-symbols-outlined text-primary">mail</span>
 </div>
 <div>
-<p class="text-xs text-on-surface-variant uppercase font-bold tracking-widest">Email Me</p>
-<p class="font-bold">contato@gustavo.dev</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">E-mail</p>
+<p class="font-body-md text-body-md">contato@sysdev.io</p>
 </div>
 </div>
 <div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-primary">
-<span class="material-symbols-outlined">distance</span>
+<div class="w-10 h-10 flex items-center justify-center bg-surface-container rounded">
+<span class="material-symbols-outlined text-primary">location_on</span>
 </div>
 <div>
-<p class="text-xs text-on-surface-variant uppercase font-bold tracking-widest">Location</p>
-<p class="font-bold">São Paulo, Brazil</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Localização</p>
+<p class="font-body-md text-body-md" data-location="São Paulo, Brazil">São Paulo, Brasil</p>
 </div>
 </div>
 </div>
 </div>
-<form class="glass-card p-8 rounded-3xl space-y-6">
-<div class="grid md:grid-cols-2 gap-6">
-<div class="space-y-2">
-<label class="text-sm font-bold text-on-surface-variant">Name</label>
-<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-xl px-4 py-3 focus:outline-none focus:border-primary transition-colors" placeholder="Your Name" type="text"/>
+<form class="bg-surface-container p-8 md:p-12 rounded-xl border border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Nome</label>
+<input class="bg-surface-container-low border-outline-variant rounded-lg p-3 text-on-surface focus:border-primary focus:ring-0" placeholder="Seu nome" type="text"/>
 </div>
-<div class="space-y-2">
-<label class="text-sm font-bold text-on-surface-variant">Email</label>
-<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-xl px-4 py-3 focus:outline-none focus:border-primary transition-colors" placeholder="email@example.com" type="email"/>
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant">E-mail</label>
+<input class="bg-surface-container-low border-outline-variant rounded-lg p-3 text-on-surface focus:border-primary focus:ring-0" placeholder="seu@email.com" type="email"/>
 </div>
 </div>
-<div class="space-y-2">
-<label class="text-sm font-bold text-on-surface-variant">Message</label>
-<textarea class="w-full bg-surface-container-lowest border border-outline-variant rounded-xl px-4 py-3 focus:outline-none focus:border-primary transition-colors resize-none" placeholder="How can I help you?" rows="4"></textarea>
+<div class="flex flex-col gap-2 mb-8">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant">Mensagem</label>
+<textarea class="bg-surface-container-low border-outline-variant rounded-lg p-3 text-on-surface focus:border-primary focus:ring-0" placeholder="Como posso ajudar?" rows="4"></textarea>
 </div>
-<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold hover:opacity-90 transition-all flex items-center justify-center gap-2" type="submit">
-                            Send Message
-                            <span class="material-symbols-outlined">send</span>
+<button class="w-full bg-primary text-on-primary py-4 rounded font-bold hover:opacity-90 transition-all flex items-center justify-center gap-2" type="submit">
+                        Enviar Mensagem <span class="material-symbols-outlined">send</span>
 </button>
 </form>
 </div>
 </div>
 </section>
-</main>
 <!-- Footer -->
-<footer class="bg-surface-dim border-t border-outline-variant/20 w-full py-section-padding">
-<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto gap-stack-md">
-<div class="flex flex-col items-center md:items-start gap-2">
-<div class="font-display text-headline-lg-mobile font-bold text-primary">DevPortfolio</div>
-<p class="text-on-surface-variant text-sm">© 2024 Built with Go & Kubernetes</p>
-</div>
-<div class="flex gap-8">
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">GitHub</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">LinkedIn</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Twitter</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Email</a>
+<footer class="bg-surface-container-lowest border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 px-gutter max-w-container-max mx-auto py-12">
+<div class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">
+                SYS.DEV
+            </div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+                © 2024 Architectural Backend Portfolio
+            </p>
+<div class="flex gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-150" href="#">GitHub</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-150" href="#">LinkedIn</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-150" href="#">Email</a>
 </div>
 </div>
 </footer>
 <script>
-        function switchTab(type) {
-            const btns = document.querySelectorAll('.tab-btn');
-            const items = document.querySelectorAll('.project-item');
-            
-            btns.forEach(btn => {
-                if(btn.dataset.tab === type) {
-                    btn.classList.add('bg-primary', 'text-on-primary');
-                    btn.classList.remove('text-on-surface-variant');
-                } else {
-                    btn.classList.remove('bg-primary', 'text-on-primary');
-                    btn.classList.add('text-on-surface-variant');
-                }
-            });
+        function switchTab(stack) {
+            const tsTab = document.getElementById('tab-ts');
+            const javaTab = document.getElementById('tab-java');
+            const projects = document.querySelectorAll('.project-item');
 
-            items.forEach(item => {
-                if(item.classList.contains(type + '-project')) {
-                    item.classList.remove('hidden');
-                } else {
-                    item.classList.add('hidden');
-                }
-            });
+            if (stack === 'ts') {
+                tsTab.classList.add('active-tab');
+                tsTab.classList.remove('text-on-surface-variant');
+                javaTab.classList.remove('active-tab');
+                javaTab.classList.add('text-on-surface-variant');
+                
+                projects.forEach(p => {
+                    if (p.classList.contains('ts-project')) {
+                        p.classList.remove('hidden');
+                    } else {
+                        p.classList.add('hidden');
+                    }
+                });
+            } else {
+                javaTab.classList.add('active-tab');
+                javaTab.classList.remove('text-on-surface-variant');
+                tsTab.classList.remove('active-tab');
+                tsTab.classList.add('text-on-surface-variant');
+
+                projects.forEach(p => {
+                    if (p.classList.contains('java-project')) {
+                        p.classList.remove('hidden');
+                    } else {
+                        p.classList.add('hidden');
+                    }
+                });
+            }
         }
 
-        // Initialize mobile menu interaction
-        document.querySelector('button.md\\:hidden').addEventListener('click', () => {
-            alert('Mobile menu navigation placeholder');
-        });
-
-        // Basic smooth scroll listener for nav links
-        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if(target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80,
+                if (target) {
+                    target.scrollIntoView({
                         behavior: 'smooth'
                     });
                 }

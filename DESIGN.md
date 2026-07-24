@@ -1,5 +1,5 @@
 ---
-name: Obsidian Blueprint
+name: Technical Precision
 colors:
   surface: '#10131a'
   surface-dim: '#10131a'
@@ -21,14 +21,14 @@ colors:
   primary-container: '#4d8eff'
   on-primary-container: '#00285d'
   inverse-primary: '#005ac2'
-  secondary: '#b1c6f9'
-  on-secondary: '#182f59'
-  secondary-container: '#304671'
-  on-secondary-container: '#9fb5e7'
-  tertiary: '#ffb786'
-  on-tertiary: '#502400'
-  tertiary-container: '#df7412'
-  on-tertiary-container: '#461f00'
+  secondary: '#b7c8e1'
+  on-secondary: '#213145'
+  secondary-container: '#3a4a5f'
+  on-secondary-container: '#a9bad3'
+  tertiary: '#89ceff'
+  on-tertiary: '#00344d'
+  tertiary-container: '#009ada'
+  on-tertiary-container: '#002d43'
   error: '#ffb4ab'
   on-error: '#690005'
   error-container: '#93000a'
@@ -37,120 +37,121 @@ colors:
   primary-fixed-dim: '#adc6ff'
   on-primary-fixed: '#001a42'
   on-primary-fixed-variant: '#004395'
-  secondary-fixed: '#d8e2ff'
-  secondary-fixed-dim: '#b1c6f9'
-  on-secondary-fixed: '#001a42'
-  on-secondary-fixed-variant: '#304671'
-  tertiary-fixed: '#ffdcc6'
-  tertiary-fixed-dim: '#ffb786'
-  on-tertiary-fixed: '#311400'
-  on-tertiary-fixed-variant: '#723600'
+  secondary-fixed: '#d3e4fe'
+  secondary-fixed-dim: '#b7c8e1'
+  on-secondary-fixed: '#0b1c30'
+  on-secondary-fixed-variant: '#38485d'
+  tertiary-fixed: '#c9e6ff'
+  tertiary-fixed-dim: '#89ceff'
+  on-tertiary-fixed: '#001e2f'
+  on-tertiary-fixed-variant: '#004c6e'
   background: '#10131a'
   on-background: '#e1e2ec'
   surface-variant: '#32353c'
 typography:
-  display:
-    fontFamily: Inter
+  display-lg:
+    fontFamily: Geist
     fontSize: 48px
     fontWeight: '700'
     lineHeight: '1.1'
     letterSpacing: -0.02em
-  headline-lg:
-    fontFamily: Inter
+  display-lg-mobile:
+    fontFamily: Geist
     fontSize: 32px
-    fontWeight: '600'
+    fontWeight: '700'
     lineHeight: '1.2'
-    letterSpacing: -0.01em
-  headline-lg-mobile:
-    fontFamily: Inter
+    letterSpacing: -0.02em
+  headline-md:
+    fontFamily: Geist
     fontSize: 24px
     fontWeight: '600'
-    lineHeight: '1.2'
+    lineHeight: '1.3'
+  body-lg:
+    fontFamily: Geist
+    fontSize: 18px
+    fontWeight: '400'
+    lineHeight: '1.6'
   body-md:
-    fontFamily: Inter
+    fontFamily: Geist
     fontSize: 16px
     fontWeight: '400'
     lineHeight: '1.6'
-  code-sm:
-    fontFamily: Geist
+  label-sm:
+    fontFamily: JetBrains Mono
+    fontSize: 13px
+    fontWeight: '500'
+    lineHeight: '1.4'
+    letterSpacing: 0.05em
+  code-block:
+    fontFamily: JetBrains Mono
     fontSize: 14px
     fontWeight: '400'
     lineHeight: '1.5'
-  label-caps:
-    fontFamily: Geist
-    fontSize: 12px
-    fontWeight: '600'
-    lineHeight: '1'
-    letterSpacing: 0.05em
 rounded:
-  sm: 0.25rem
-  DEFAULT: 0.5rem
-  md: 0.75rem
-  lg: 1rem
-  xl: 1.5rem
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
   full: 9999px
 spacing:
-  container-max: 1200px
+  unit: 8px
+  container-max: 1120px
   gutter: 24px
-  margin-mobile: 16px
-  stack-sm: 8px
-  stack-md: 24px
-  stack-lg: 64px
-  section-padding: 120px
+  section-padding-desktop: 120px
+  section-padding-mobile: 64px
 ---
 
 ## Brand & Style
+The brand personality is authoritative yet understated, reflecting the discipline of a Senior Backend Developer. It prioritizes clarity, structural integrity, and performance over decorative flair. The target audience includes technical recruiters, engineering leads, and CTOs who value efficiency and architectural depth.
 
-The design system is engineered for a high-end backend developer portfolio, prioritizing technical maturity and precision. It employs a **Modern Minimalism** aesthetic with a focus on deep verticality and structural clarity. The visual narrative is built on the concept of "the terminal at night"—high-contrast text against an expansive, dark void, punctuated by functional color.
-
-The target audience consists of technical recruiters and engineering leads who value efficiency, clean code, and architectural rigor. The UI should evoke a sense of calm, focused expertise and uncompromising quality through generous whitespace and a restricted, premium color palette.
+The design style is **Minimalist with a Technical Edge**. It utilizes high whitespace to ensure focus, a constrained color palette to signal professionalism, and subtle motion to indicate system reactivity. The aesthetic draws from "Developer-centric" modernism—clean lines, precise alignments, and a focus on content hierarchy.
 
 ## Colors
+The palette is rooted in a **Rich Dark (#0F172A)** background to reduce eye strain and provide a premium canvas. The **Primary Electric Blue (#3B82F6)** is used sparingly for call-to-actions, active states, and critical highlights, ensuring high visibility without overwhelming the layout. 
 
-The palette is centered on a "Deep Night" foundation. The primary background (#0B0F1A) provides an ink-black canvas that makes code and typography pop. 
-
-- **Primary Accent**: A vibrant, high-energy Blue (#3B82F6) used exclusively for interactive elements, focus states, and key call-to-actions.
-- **Surface Strategy**: We use a tiered gray system. `surface-1` (#111827) for containers and `surface-2` (#1F2937) for borders and dividers.
-- **Typography**: Pure white is avoided to reduce eye strain; instead, use Off-White (#F9FAFB) for headings and Muted Gray (#9CA3AF) for body text to establish a clear information hierarchy.
+Secondary and tertiary blues are utilized for code syntax highlighting and subtle UI accents. Neutral grays provide a clear hierarchy for typography, with pure white reserved only for the most important headings.
 
 ## Typography
+The system uses **Geist** for its exceptional balance of geometric precision and readability, making it ideal for technical portfolios. **JetBrains Mono** is introduced for labels, metadata, and code snippets to reinforce the backend developer persona.
 
-This design system utilizes **Inter** for all primary communication due to its exceptional legibility and neutral, professional tone. To lean into the "developer" aesthetic, **Geist** (or a similar high-quality monospaced font) is used for labels, metadata, and code snippets.
-
-- **Display**: Reserved for the hero section; tight tracking and heavy weight convey confidence.
-- **Body**: Set with generous line-height (1.6) to ensure long-form technical case studies remain readable.
-- **Labels**: Always use the monospaced font in uppercase for a technical, "instrument cluster" feel.
+Headlines should be set with tight letter-spacing to appear more impactful. Body text maintains a generous line-height to ensure long-form project descriptions remain legible. Mobile typography scales down significantly to maintain a "single-screen" feel for project introductions.
 
 ## Layout & Spacing
+This design system utilizes a **Fixed Grid** approach for desktop, centering content within a 1120px container to maintain readability on ultra-wide monitors. A 12-column system is used for project grids, while a 12-column sub-grid handles internal card layouts.
 
-The layout follows a **Fixed Grid** approach for desktop to maintain a controlled, editorial feel, transitioning to a fluid single-column for mobile.
-
-- **Vertical Rhythm**: A strict 8px base unit is used. Sections are separated by large gaps (120px+) to emphasize the minimalist "premium" aesthetic.
-- **Content Width**: Information-heavy sections (like blog posts) should be constrained to a 720px readable width, while project galleries utilize the full 1200px container.
-- **Mobile Reflow**: On mobile, horizontal padding reduces to 16px, and stack spacing scales down by 25% to maintain density.
+Vertical rhythm is strictly based on an 8px base unit. Section spacing is intentionally generous (120px) to give the developer's work "room to breathe," signaling a high-end, curated portfolio rather than a dense resume. On mobile, margins shrink to 20px, and section padding is reduced to 64px.
 
 ## Elevation & Depth
+Depth is created through **Tonal Layering** and **Subtle Outlines** rather than heavy shadows. 
+- **Level 0 (Background):** #0F172A.
+- **Level 1 (Cards/Surface):** #1E293B with a 1px border of #334155.
+- **Level 2 (Hovers/Modals):** A subtle glow effect using the primary color at 5% opacity and a slightly brighter border (#475569).
 
-This design system avoids traditional shadows in favor of **Tonal Layers** and **Subtle Outlines**. Depth is communicated through luminosity rather than blur.
-
-- **Surface Levels**: Elements "closer" to the user are rendered in slightly lighter grays (#111827).
-- **Borders**: Interactive cards and containers use a 1px solid border (#1F2937).
-- **Interactive State**: On hover, the border color should shift to the primary blue (#3B82F6) at 50% opacity, creating a "glow" effect that feels technical and reactive.
-- **Glassmorphism**: Use backdrop filters (blur: 12px) sparingly for navigation bars to maintain context of the background content during scroll.
+Interactive elements should use a "Lift and Glow" transition: on hover, the border-color transitions to the Primary Blue, and a faint 20px blur of the Primary color appears behind the element.
 
 ## Shapes
-
-The shape language is defined by **Large Radii (2xl)**. Despite the technical nature of the site, the rounded corners prevent the UI from feeling "sharp" or "aggressive," landing instead on a "refined and approachable" tone.
-
-- **Standard Containers**: Use 1rem (16px) for cards and sections.
-- **Buttons & Inputs**: Use 0.75rem (12px) to maintain a cohesive look with larger containers.
-- **Code Blocks**: Should match the 1rem radius to soften the technical content.
+Shapes are **Soft (4px - 12px)**. This degree of roundedness strikes a balance between the "hardness" of engineering and the "softness" of modern UI. 
+- **Buttons and Inputs:** 6px radius for a precise, professional look.
+- **Project Cards:** 12px radius to define larger content areas.
+- **Tags/Chips:** 4px radius to maintain a modular, technical aesthetic.
 
 ## Components
 
-- **Buttons**: Primary buttons are solid Blue (#3B82F6) with white text. Secondary buttons use a ghost style (border-only) with the primary blue for text and border.
-- **Cards**: Project cards feature a subtle gradient background (from #111827 to #0B0F1A) and a 1px border. No shadows.
-- **Inputs**: Field backgrounds should be darker than the surface they sit on. The focus state is a 2px blue border.
-- **Chips/Tags**: Small, monospaced text inside a subtle gray capsule. Used for tech stack listing (e.g., "Go", "Kubernetes").
-- **Code Snippets**: Styled to look like a terminal window with three decorative window controls (red, yellow, green) in the top-left corner.
-- **Status Indicators**: Use a small "pulsing" dot next to "Available for work" text to add a sense of liveness to the portfolio.
+### Buttons
+Primary buttons use a solid Primary Blue background with white text. Secondary buttons use a "Ghost" style: a transparent background with a 1px border. Transitions must be instant (150ms) to reflect backend efficiency.
+
+### Project Cards
+Large-format cards featuring a header, a brief architectural summary, and a "Tech Stack" footer. The entire card is interactive, using the "Lift and Glow" hover state described in the Elevation section.
+
+### Tabbed Navigation
+Used for switching between "Experience," "Education," and "Skills." Tabs are text-only with a 2px bottom indicator that slides into place. Use the `label-sm` typography for tab headers.
+
+### Timelines
+Vertical lines should be 1px wide, colored #334155. Significant milestones are marked by a 8px circle. The line should be dashed for "Current" or "Ongoing" roles to signify progress.
+
+### Tech Icons
+Icons should be monochrome (Secondary Blue) by default, switching to their brand color only on hover. They should be housed in 32px x 32px subtle containers for uniform alignment.
+
+### Code Snippets
+Display key architectural patterns or API designs using a dark-themed syntax highlighter within a Level 1 surface container. Use `code-block` typography for maximum clarity.
