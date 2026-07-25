@@ -137,6 +137,19 @@
             background-color: #4d8eff;
             color: #001a42;
         }
+
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(0); opacity: 0.6; }
+            50% { transform: translateY(8px); opacity: 1; }
+        }
+
+        .scroll-indicator {
+            animation: bounce-slow 2s ease-in-out infinite;
+        }
+
+        .hero-fade-bottom {
+            background: linear-gradient(to bottom, transparent 70%, #10131a 100%);
+        }
     </style>
 </head>
 
@@ -182,7 +195,7 @@
     </header>
 
     <!-- Hero & Info Section -->
-    <section class="relative min-h-[90vh] flex flex-col justify-center pt-28 pb-16" id="sobre">
+    <section class="relative flex flex-col justify-center pt-28 pb-16" id="sobre">
         <div class="max-w-container-max mx-auto px-gutter w-full">
             <!-- Header Badges and Title -->
             <div class="max-w-5xl mb-10">
@@ -284,6 +297,14 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="flex flex-col items-center mt-10 gap-1.5">
+            <span class="text-[11px] font-code-block text-on-surface-variant tracking-widest uppercase">Scroll</span>
+            <div class="scroll-indicator flex flex-col items-center gap-0.5 text-primary">
+                <span class="material-symbols-outlined text-2xl">keyboard_arrow_down</span>
             </div>
         </div>
     </section>
